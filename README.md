@@ -20,7 +20,7 @@ npm run dev
 
 Navigate to [localhost:5000](http://localhost:5000) and you should see the app running.
 
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we Svelte recommends installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
+If you're using [Visual Studio Code](https://code.visualstudio.com/) Svelte recommends installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
 
 ## Building and running in production mode
 
