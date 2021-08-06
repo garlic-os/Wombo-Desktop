@@ -9,7 +9,7 @@
 	import VirtualScroll from "svelte-scroll-infinite-list";
 	import DropArea from "./DropArea.svelte";
 	import ErrorBanner from "./ErrorBanner.svelte";
-	import MemeButton from "./MemeButton.svelte";
+	import MemeRadioButton from "./MemeRadioButton.svelte";
 	import NextButton from "./NextButton.svelte";
 	import BackButton from "./BackButton.svelte";
 
@@ -98,7 +98,6 @@
 							   rowHeight={200}
 							   visibleRows={15}
 							   let:item>
-					<MemeButton meme={item} bind:selectedMeme />
 				</VirtualScroll>
 			</div>
 		{/await}
