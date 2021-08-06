@@ -4,7 +4,7 @@ A desktop recreation of the Wombo app.
 
 
 ## Get started
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+*Note that you will need to have [node.js](https://nodejs.org) installed.*
 
 Install the dependencies...
 
