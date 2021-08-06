@@ -5,60 +5,39 @@
  * This server proxies the needed requests to Wombo's API so the browser doesn't
  * have to include any Authentication headers in its own requests, thereby
  * circumventing CORS.
- * By the way, Wombo doesn't actually do anything with the Authorization header
- * that it requires from you.
+ * All this effort and Wombo doesn't actually do anything with the
+ * Authorization header. But if you try to make a request without one, it won't
+ * accept it.
  */
-process.on("unhandledRejection", (up) => { throw up; });
 
-import express from "express";
-import cors from "cors";
+import fastify from "fastify";
+import path from "path";
 import axios from "axios";
 import Formidable from "formidable";
-import FormData from "form-data"
-import dotenv from "dotenv";
+import FormData from "form-data";
 import fs from "fs";
+import config from "./config.js";
 
-dotenv.config();
+const app = fastify({ logger: true });
+const formidable = Formidable();
 
-const app = express();
-const port = process.env.PORT;
-const formidable = new Formidable();
-
-app.use(cors());  // Good manners
-app.use(express.json());  // Parse JSON
-app.use(express.static("public"));  // Host /public
+// Middleware
+import fastifyCors from "fastify-cors";
+import fastifyStatic from "fastify-static";
+app.register(fastifyCors);  // Good manners
+app.register(fastifyStatic, {  // Host public/
+	root: path.join(process.cwd(), "public"),
+});
 
 
 // This is legitimately the token Wombo uses
+// This whole file is to put this into three of the requests
 const token = Buffer.from("wombo-that-shizz:GetThatBread$1!").toString("base64");
 const womboHeader = { "Authorization": `Basic ${token}` };
 
 
-/**
- * @param {express.Request} req
- * @returns {Promise<FormData>}
- */
-function parseMultipartFormData(req) {
-	return new Promise( (resolve, reject) => {
-		formidable.parse(req, (error, fields, {file}) => {
-			if (error) return reject(error);
-			const form = new FormData();
-			for (const key in fields) {
-				form.append(key, fields[key]);
-			}
-			form.append(
-				"file",
-				fs.createReadStream(file.path),
-				file.name,
-			);
-			resolve(form);
-		});
-	});
-}
-
-
-app.post("/reserve-upload-location", async (_, res) => {
-	console.debug("Reserving new upload location...");
+app.post("/reserve-upload-location", async (_, reply) => {
+	app.log.info("Reserving new upload location...");
 
 	const { data } = await axios.post(
 		"https://api.wombo.ai/mobile-app/mashups/",
@@ -66,25 +45,61 @@ app.post("/reserve-upload-location", async (_, res) => {
 		{ headers: womboHeader },
 	);
 
-	res.json(data);
+	if (config.DEBUG) {
+		axios.post(
+			"http://localhost:5001",
+			null,
+			{ headers: womboHeader },
+		);
+	}
 
-	console.debug("Reserved upload location for request ID:", data.request_id);
+	reply.send(data);
+
+	app.log.info("Reserved upload location for request ID:", data.id);
 });
 
 
-app.post("/upload-image", async (req, res) => {
-	const form = await parseMultipartFormData(req);
-	console.debug("[*] Uploading image to:", form.getHeaders().key);
-	form.submit("https://wombo-user-content.s3.amazonaws.com/");
-	console.debug("[*] Uploaded image to:", form.getHeaders().key);
-	res.sendStatus(200);
+app.post("/upload-image", async (req, reply) => {
+	formidable.parse(req, (error, fields, {file}) => {
+		if (error) {
+			app.log.error("Upload failed:", error);
+			return reply.status(500).send(error.message);
+		}
+
+		app.log.info("Uploading image to:", fields.key);
+
+		if (Array.isArray(file)) file = file[0];
+
+		const form = new FormData();
+		for (const key in fields) {
+			form.append(key, fields[key]);
+		}
+
+		fs.readFile(file.path, (error, data) => {
+			if (error) {
+				app.log.error("Upload failed:", error);
+				return reply.status(500).send(error.message);
+			}
+			form.append("file", data, file.name);
+
+			form.submit("https://wombo-user-content.s3.amazonaws.com/", (error) => {
+				if (error) {
+					app.log.error("Upload failed:", error);
+					return reply.status(500).send(error.message);
+				}
+			});
+	
+			app.log.info("Uploaded image to:", fields.key);
+			reply.sendStatus(200);
+		});
+	});
 });
 
 
-app.post("/start-processing", async (req, res) => {
-	console.debug("Beginning processing for request ID:", req.body.request_id);
+app.post("/start-processing", async (req, reply) => {
+	app.log.info("Beginning processing for request ID:", req.body.request_id);
 
-	// 😒
+	// 😔
 	req.body.request_info.meme_id = req.body.request_info.meme_id.toString();
 
 	const { data } = await axios.put(
@@ -93,26 +108,49 @@ app.post("/start-processing", async (req, res) => {
 		{ headers: womboHeader },
 	);
 
-	res.json(data);
+	if (config.DEBUG) {
+		axios.put(
+			`http://localhost:5001/${req.body.request_id}`,
+			null,
+			{ headers: womboHeader },
+		);
+	}
 
-	console.debug("Begun processing for request ID:", req.body.request_id);
+	reply.send(data);
+
+	app.log.info("Begun processing for request ID:", req.body.request_id);
 });
 
 
-app.post("/status", async (req, res) => {
-	console.debug("Getting status for request ID:", req.body.request_id);
+app.post("/status", async (req, reply) => {
+	app.log.info("Getting status for request ID:", req.body.request_id);
 
 	const { data } = await axios.get(
 		`https://api.wombo.ai/mobile-app/mashups/${req.body.request_id}`,
 		{ headers: womboHeader },
 	);
 
-	res.json(data);
+	if (config.DEBUG) {
+		axios.get(
+			`http://localhost:5001/${req.body.request_id}`,
+			null,
+			{ headers: womboHeader },
+		);
+	}
 
-	console.debug("Got status for request ID:", req.body.request_id, data.state);
+	reply.send(data);
+	app.log.info("Got status for request ID:", req.body.request_id, data.state);
 });
 
 
-export default app.listen(port, () => {
-	console.log(`Server started at http://localhost:${port}/`);
-});
+(async () => {
+	try {
+		if (config.DEBUG) {
+			app.log.warn("Debug enabled");
+		}
+		await app.listen(config.PORT);
+	} catch (error) {
+		app.log.error(error);
+		process.exit(1);
+	}
+})();

@@ -5,16 +5,17 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "node src/server.js",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "dev": "rollup -c -w | pino-pretty",
+    "start": "node src/server.js | pino-pretty",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "debug": "node src/debug-server.js | pino-pretty"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "@tsconfig/svelte": "^2.0.1",
-    "concurrently": "^6.2.0",
+    "pino-pretty": "^5.1.2",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
@@ -31,9 +32,9 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
+    "fastify": "^3.20.1",
+    "fastify-cors": "^6.0.2",
+    "fastify-static": "^4.2.2",
     "form-data": "^4.0.0",
     "formidable": "^1.2.2"
   }

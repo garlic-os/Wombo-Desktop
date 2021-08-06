@@ -1,0 +1,5 @@
+{
+    "ignore": "time,pid,hostname",
+    "colorize": true,
+    "singleLine": true
+}

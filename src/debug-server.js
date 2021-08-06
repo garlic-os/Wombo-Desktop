@@ -1,28 +1,37 @@
-import express from "express";
-import cors from "cors";
+import fastify from "fastify";
 import fs from "fs";
-
-process.on("unhandledRejection", (up) => { throw up; });
-
-
-const app = express();
-const port = 5001;
-
-app.use(cors());  // Good manners
+import config from "./config.js";
 
 
-const raw = (req, _, next) => {
-	req.body = "";
-	req.on("data", (chunk) => req.body += chunk );
-	req.on("end", next);
+const app = fastify();
+
+// Middleware
+import fastifyCors from "fastify-cors";
+app.register(fastifyCors);
+
+
+const raw = express.raw({
+	limit: 99999999999999,
+});
+
+
+const handleRequest = (req, reply) => {
+	console.debug("Request received");
+	fs.appendFileSync("debug.cap", JSON.stringify(req.body) + "\n");
+	reply.sendStatus(200);
 };
 
-app.post("*", raw, (req, res) => {
-    console.log("Request received");
-	fs.writeFileSync("debug.cap", req.body);
-	res.sendStatus(200);
-});
 
-export default app.listen(port, () => {
-	console.log(`Server started on port ${port}`);
-});
+app.get("*", raw, handleRequest);
+app.post("*", raw, handleRequest);
+app.put("*", raw, handleRequest);
+
+
+(async () => {
+	try {
+		await app.listen(config.PORT);
+	} catch (error) {
+		app.log.error(error);
+		process.exit(1);
+	}
+})();
