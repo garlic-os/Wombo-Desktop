@@ -1,20 +1,21 @@
 <script lang="ts">
-	type Maybe<T> = T | undefined;
+	import type { Maybe } from "../types";
 
 	export let file: Maybe<File> = undefined;
 	let dropArea: HTMLDivElement;
 	let inputElement: HTMLInputElement;
+	let dragover = false;
 
 	function handleDragenter(event: DragEvent): void {
 		event.preventDefault();
 		// event.stopPropagation();
-		dropArea.classList.add("dragover");
+		dragover = true;
 	}
 
 	function handleDragleave(event: DragEvent): void {
 		event.preventDefault();
 		// event.stopPropagation();
-		dropArea.classList.remove("dragover");
+		dragover = false;
 	}
 
 	function handleDragover(event: DragEvent): void {
@@ -28,7 +29,7 @@
 		event.stopPropagation();
 		event.preventDefault();
 		handleFile(event.dataTransfer.files);
-		dropArea.classList.remove("dragover");
+		dragover = false;
 	}
 
 	function handleFile(files: FileList): void {
@@ -44,7 +45,10 @@
 
 
 
-<div class="drop-area" class:empty={!file} bind:this={dropArea}
+<div class="drop-area"
+	 class:empty={!file}
+	 class:dragover
+	 bind:this={dropArea}
      on:click={ () => file || inputElement.click() }
 	 on:dragenter={handleDragenter}
 	 on:dragleave={handleDragleave}
@@ -57,7 +61,9 @@
 	{:else}
 		<div class="image icon" />
 		<label>Choose or drag and drop an image
-			<input type="file" accept="image/*" bind:this={inputElement}
+			<input type="file"
+				   accept="image/*"
+				   bind:this={inputElement}
 				   on:change={ () => handleFile(inputElement.files) }
 			/>
 		</label>
