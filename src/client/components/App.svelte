@@ -98,6 +98,9 @@
 							   rowHeight={200}
 							   visibleRows={15}
 							   let:item>
+					<MemeRadioButton name="meme"
+						             meme={item}
+						             bind:selectedMeme />
 				</VirtualScroll>
 			</div>
 		{/await}
