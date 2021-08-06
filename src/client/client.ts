@@ -86,7 +86,7 @@ export async function processImage(
 			request_info: {
 				meme_id: memeID,
 				premium: false,  // TODO: What happens if you make this `true`?
-			}
+			}                    // Higher processing priority?
 		}),
 	});
 
