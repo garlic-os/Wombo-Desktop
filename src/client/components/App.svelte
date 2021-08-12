@@ -2,7 +2,7 @@
 	import type { Meme, Maybe, PageName } from "../types";
 
 	import { onMount } from "svelte";
-	import { generateMeme } from "../client";
+	import { generateMeme } from "../wombo";
 	import convert2jpg from "../convert2jpg";
 
 	import { fade } from "svelte/transition";
