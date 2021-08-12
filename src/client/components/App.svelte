@@ -13,7 +13,6 @@
 	import NextButton from "./NextButton.svelte";
 	import BackButton from "./BackButton.svelte";
 
-
 	// Show errors in an error banner
 	onMount( () => {
 		window.addEventListener("error", (event: ErrorEvent): void => {
@@ -112,7 +111,7 @@
 		{/if}
 
 		<BackButton icon="undo" on:click={ () => page = "upload" }>
-			Retake Photo
+			Choose new image
 		</BackButton>
 	</section>
 
