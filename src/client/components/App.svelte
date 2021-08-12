@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Meme, Maybe } from "../types";
+	import type { Meme, Maybe, PageName } from "../types";
 
 	import { onMount } from "svelte";
 	import { generateMeme } from "../client";
@@ -29,7 +29,7 @@
 
 	let mainElement: HTMLDivElement;
 	let image: Maybe<File>;
-	let page = "upload";
+	let page: PageName = "upload";
 	let selectedMeme: Maybe<Meme>;
 	let progressMessage = defaultProgressMessage;
 	let videoURL: Maybe<string>;
