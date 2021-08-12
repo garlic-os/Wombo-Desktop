@@ -129,8 +129,7 @@
 	<section transition:fade={fadeParams}>
 		{#if videoURL}
 			<!-- svelte-ignore a11y-media-has-caption -->
-			<!-- <video src={videoURL} controls /> -->
-			<video src="https://cdn.discordapp.com/attachments/574795608406097940/855581114546126849/150.mp4" controls />
+			<video src={videoURL} controls />
 		{:else}
 			<span>{error?.message}</span>
 		{/if}
