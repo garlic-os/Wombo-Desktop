@@ -2,34 +2,29 @@
 	import type { Maybe } from "../types";
 
 	export let file: Maybe<File> = undefined;
-	let dropArea: HTMLDivElement;
-	let inputElement: HTMLInputElement;
-	let dragover = false;
+	let input: HTMLInputElement;
 
-	function handleDragenter(event: DragEvent): void {
-		event.preventDefault();
-		// event.stopPropagation();
-		dragover = true;
-	}
+	// FUNNY BUSINESS: This number's truthiness determines the component's
+	// .dragover class state.
+	// To accomodate for how dragging over a child element triggers a dragenter
+	// followed by a dragleave from the parent, we can't just use a boolean
+	// otherwise the dragleave will set the class to false even though the
+	// user is still dragging over the component.
+	// Incrementing and decrementing this value on dragenter and dragleave
+	// events and using the number's truthiness as a boolean keeps the
+	// .dragover class state accurate.
+	let dragover = 0;
 
-	function handleDragleave(event: DragEvent): void {
-		event.preventDefault();
-		// event.stopPropagation();
-		dragover = false;
+	function handleDrop(event: DragEvent): void {
+		event.preventDefault();  // Prevent opening image in new tab
+		handleFile(event.dataTransfer.files);
+		dragover = 0;
 	}
 
 	function handleDragover(event: DragEvent): void {
-		// drop event doesn't fire without this ¯\_(ツ)_/¯
+		// Drop event doesn't fire if dragover isn't canceled 🤷‍♂️
 		// https://stackoverflow.com/a/21341021
 		event.preventDefault();
-		// event.stopPropagation();
-	}
-
-	function handleDrop(event: DragEvent): void {
-		event.stopPropagation();
-		event.preventDefault();
-		handleFile(event.dataTransfer.files);
-		dragover = false;
 	}
 
 	function handleFile(files: FileList): void {
@@ -37,8 +32,7 @@
 	}
 
 	function clear(event: Event): void {
-		// Prevent "choose" dialog from being immediately re-triggered
-		event.stopPropagation();
+		event.stopPropagation();  // Prevent "choose" dialog re-trigger
 		file = undefined;
 	}
 </script>
@@ -48,10 +42,9 @@
 <div class="drop-area"
 	 class:empty={!file}
 	 class:dragover
-	 bind:this={dropArea}
-     on:click={ () => file || inputElement.click() }
-	 on:dragenter={handleDragenter}
-	 on:dragleave={handleDragleave}
+	 on:click={ () => file || input.click() }
+	 on:dragenter={ () => ++dragover }
+	 on:dragleave={ () => --dragover }
 	 on:dragover={handleDragover}
 	 on:drop={handleDrop}
 >
@@ -63,8 +56,8 @@
 		<label>Choose or drag and drop an image
 			<input type="file"
 				   accept="image/*"
-				   bind:this={inputElement}
-				   on:change={ () => handleFile(inputElement.files) }
+				   bind:this={input}
+				   on:change={ () => handleFile(input.files) }
 			/>
 		</label>
 	{/if}
@@ -77,9 +70,10 @@
 		position: relative;
 		border: 2px solid #7d8084;
 		border-radius: 40px;
+		overflow: hidden;  /* Clip content's borders, too */
 		width: 90%;
 		max-width: 100%;
-		height: 45%;
+		height: 65%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -153,8 +147,9 @@
 	}
 
 	img {
-		height: 100%;
 		max-height: 100%;
 		max-width: 100%;
+		width: auto;
+		height: auto;
 	}
 </style>
