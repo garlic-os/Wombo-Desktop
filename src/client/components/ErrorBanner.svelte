@@ -41,6 +41,6 @@
 	}
 
 	.icon.close {
-		background-image: url("../img/close.svg");
+		background-image: url("../img/x.svg");
 	}
 </style>
