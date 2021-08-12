@@ -6,9 +6,9 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w | pino-pretty",
-    "start": "node src/server.js | pino-pretty",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "debug": "node src/debug-server.js | pino-pretty"
+    "server": "node src/server.js | pino-pretty",
+    "start": "npm run server",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
