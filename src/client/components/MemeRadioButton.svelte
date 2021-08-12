@@ -42,7 +42,8 @@
 
 
 
-<label class:selected={isSelected}
+<label class="meme-radio-button"
+	   class:selected={isSelected}
 	   on:click|preventDefault={ () => selectedMeme = meme }>
 	<input type="radio"
 		   value={meme.id}

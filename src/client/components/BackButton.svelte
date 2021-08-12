@@ -10,11 +10,14 @@
 
 
 
-<button transition:fly="{{ x: -300, duration: 500 }}" on:click>
+<button class="back-button"
+	    transition:fly="{{ x: -300, duration: 500 }}"
+	    on:click
+>
 	{#if icon}
 		<span style="background-image: url('../img/{icon}.svg');" />
 	{/if}
-	<slot></slot>
+	<slot />
 </button>
 
 
