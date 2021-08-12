@@ -13,7 +13,7 @@
 <style>
 	/* https://css-tricks.com/animating-a-css-gradient-border/ */
 	/* Very limited current compatibility; background will not spin in most */
-	/* browsers but the most recent versions of Chrome. Oh well! */
+	/* browsers except very recent versions of Chrome. Oh well! */
 	@property --bg-angle {
 		syntax: "<angle>";
 		initial-value: 145deg;
