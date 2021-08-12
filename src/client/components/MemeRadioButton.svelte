@@ -70,7 +70,7 @@
 		width: 38rem;
 		max-width: 100%;
 		height: 7.5rem;
-		background-color: green;
+		background-color: green; /* TODO: Random color gradient */
 		border-radius: 30px;
 		border: 3px solid black;
 		cursor: pointer;
