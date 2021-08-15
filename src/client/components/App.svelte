@@ -213,15 +213,17 @@
 		font-size: 24pt;
 	}
 	video {
+		width: calc(100vh - 4rem);
 		height: calc(100vh - 4rem);
-		max-width: 100vw;
+		max-width: 90vw;
 		transition: width 500ms, height 500ms;
 		border-radius: 50px;
 	}
 
 	@media only screen and (min-height: 600px) {
 		video {
-			height: 80%;
+			width: 72vh;
+			height: 72vh;
 		}
 	}
 </style>
