@@ -88,10 +88,10 @@
 
 
 <main bind:this={mainElement}>
-	<header class="logo">Wombon't</header>
+	<span class="logo header">Wombon't</span>
 
 	{#if page == "upload"}
-	<section transition:fade={fadeParams}>
+	<section transition:fade={fadeParams} class="center">
 		<DropArea bind:file={image} />
 
 		{#if image}
@@ -138,7 +138,7 @@
 	</section>
 
 	{:else if page == "result"}
-	<section transition:fade={fadeParams}>
+	<section transition:fade={fadeParams} class="center">
 		{#if videoURL}
 			<!-- svelte-ignore a11y-media-has-caption -->
 			<video src={videoURL} controls autoplay loop />
@@ -165,11 +165,11 @@
 	section {
 		position: absolute;
 		left: 0; top: 0;
-		padding-top: 6rem;
 		width: 100%;
 		height: 100%;
 		transition: padding ease-out 500ms;
 		overflow: hidden auto;
+		padding-top: 4.75rem;
 
 		display: flex;
 		align-items: center;
@@ -183,13 +183,18 @@
 		}
 	}
 
-	header {
+	section.center {
+		justify-content: center;
+	}
+
+	.header {
 		position: fixed;
 		left: 0; top: 0;
 		background-color: black;
-		height: 4rem;
-		width: 100vw;
-		padding: 1rem 2rem;
+		height: 4.75rem;
+		width: calc(100vw - 17px); /* HACK: Keep the header out of the way of */
+		padding-right: calc(2rem - 17px); /* the scroll bar */
+		padding: 1.5rem 2rem;
 		text-align: center;
 		z-index: 1;
 	}
