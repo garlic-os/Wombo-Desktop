@@ -24,7 +24,7 @@
 
 <style>
 	button {
-		position: absolute;
+		position: fixed;
 		left: 1.6rem; top: 0.8rem;
 		background: none;
 		display: flex;
