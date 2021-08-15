@@ -38,7 +38,6 @@
 		background: none;
 		background-size: 100%;
 		border: none;
-		filter: invert();
 	}
 
 	.icon.close {
