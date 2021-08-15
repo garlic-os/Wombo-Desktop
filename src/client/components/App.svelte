@@ -16,6 +16,9 @@
 	// Show errors in an error banner
 	onMount( () => {
 		window.addEventListener("error", (event: ErrorEvent): void => {
+			if (error.message === "ResizeObserver loop limit exceeded") {
+				return;
+			}
 			console.error(event.error);
 			new ErrorBanner({
 				target: mainElement,
