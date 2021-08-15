@@ -6,7 +6,6 @@
 	import convert2jpg from "../convert2jpg";
 
 	import { fade } from "svelte/transition";
-	import VirtualScroll from "svelte-scroll-infinite-list";
 	import DropArea from "./DropArea.svelte";
 	import ErrorBanner from "./ErrorBanner.svelte";
 	import MemeRadioButton from "./MemeRadioButton.svelte";
