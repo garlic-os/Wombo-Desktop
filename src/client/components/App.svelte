@@ -146,7 +146,7 @@
 			<span>{error?.message}</span>
 		{/if}
 
-		<p></p>
+		<p class="song-name">{selectedMeme.artist} - {selectedMeme.name}</p>
 
 		<NextButton downloadURL={videoURL}>
 			Save
@@ -212,6 +212,13 @@
 		color: var(--green-2);
 		font-size: 24pt;
 	}
+
+	.song-name {
+		font-weight: bold;
+		font-size: 3.5vh;
+		text-align: center;
+	}
+
 	video {
 		width: calc(100vh - 4rem);
 		height: calc(100vh - 4rem);
