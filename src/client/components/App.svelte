@@ -2,10 +2,10 @@
 	import type { Meme, Maybe, PageName } from "../types";
 
 	import { onMount } from "svelte";
+	import { fade } from "svelte/transition";
 	import { generateMeme } from "../wombo";
 	import convert2jpg from "../convert2jpg";
 
-	import { fade } from "svelte/transition";
 	import DropArea from "./DropArea.svelte";
 	import ErrorBanner from "./ErrorBanner.svelte";
 	import MemeRadioButton from "./MemeRadioButton.svelte";
@@ -28,6 +28,7 @@
 	});
 
 	const defaultProgressMessage = "Warming up...";
+	const fadeParams = { duration: 250 };
 
 	let mainElement: HTMLDivElement;
 	let image: Maybe<File>;
@@ -39,7 +40,6 @@
 	let progressLevel = 0;
 	let maxProgress = 8;
 
-	const fadeParams = { duration: 250 };
 	$: progressPercent = 100 * progressLevel / maxProgress;
 
 	// Load memes.json
