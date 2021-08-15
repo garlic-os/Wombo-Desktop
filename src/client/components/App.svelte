@@ -37,7 +37,7 @@
 	const fadeParams = { duration: 250 };
 
 	// Load memes.json
-	const memesLoaded = fetch("../fewer-memes.json")
+	const memesLoaded = fetch("../memes.json")
 		.then(response => response.json() as Promise<Meme[]> );
 
 
