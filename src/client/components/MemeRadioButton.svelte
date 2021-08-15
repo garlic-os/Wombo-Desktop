@@ -28,9 +28,10 @@
 		isSelected = meme.id === selectedMeme.id;
 
 		// Play/pause selected meme;
-		// pause any not-selected memes that are currently playing.
-		if (!previewElement?.paused) {
-			previewElement?.pause();
+		// stop any not-selected memes that are currently playing.
+		if (previewElement && !previewElement.paused) {
+			previewElement.pause();
+			previewElement.currentTime = 0;
 		} else if (isSelected) {
 			previewElement?.play();
 		}
