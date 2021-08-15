@@ -14,8 +14,8 @@
 
 <style>
 	.error-banner {
-		position: absolute;
-		left: 0; top: 0;
+		position: fixed;
+		left: 0; top: 4.75rem;
 		width: 100%;
 		height: 4rem;
 		padding: 1rem;
@@ -23,6 +23,7 @@
 		color: #ffffffe3;
 		border-bottom: 2px solid #c20027;
 		font-family: monospace;
+		z-index: 9999;
 	}
 
 	button {
