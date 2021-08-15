@@ -28,7 +28,9 @@
 	}
 
 	function handleFile(files: FileList): void {
-		file = files.item(0);
+		if (files.item(0).type.startsWith("image/")) {
+			file = files.item(0);
+		}
 	}
 
 	function clear(event: Event): void {
