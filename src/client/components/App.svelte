@@ -92,15 +92,12 @@
 		{#await memesLoaded}
 			<p>Loading memes...</p>
 		{:then memes}
-			<div style="width: unset">
-				<VirtualScroll data={memes}
-							   rowHeight={200}
-							   visibleRows={15}
-							   let:item>
+			<div class="meme-list">
+				{#each memes as item}
 					<MemeRadioButton name="meme"
-						             meme={item}
-						             bind:selectedMeme />
-				</VirtualScroll>
+									meme={item}
+									bind:selectedMeme />
+				{/each}
 			</div>
 		{/await}
 
