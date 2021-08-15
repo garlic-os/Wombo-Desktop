@@ -148,7 +148,7 @@
 
 		<p></p>
 
-		<NextButton on:click={submit}>
+		<NextButton downloadURL={videoURL}>
 			Save
 		</NextButton>
 
