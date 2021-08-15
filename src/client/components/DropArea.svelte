@@ -71,7 +71,7 @@
 	.drop-area {
 		position: relative;
 		border: 2px solid #7d8084;
-		border-radius: 40px;
+		border-radius: 50px;
 		overflow: hidden;  /* Clip content's borders, too */
 		width: 90%;
 		max-width: 100%;

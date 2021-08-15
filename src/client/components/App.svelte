@@ -213,7 +213,7 @@
 		height: calc(100vh - 4rem);
 		max-width: 100vw;
 		transition: width 500ms, height 500ms;
-		border-radius: 30px;
+		border-radius: 50px;
 	}
 
 	@media only screen and (min-height: 600px) {
