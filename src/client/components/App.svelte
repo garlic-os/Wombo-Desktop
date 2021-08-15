@@ -141,7 +141,7 @@
 	<section transition:fade={fadeParams}>
 		{#if videoURL}
 			<!-- svelte-ignore a11y-media-has-caption -->
-			<video src={videoURL} controls />
+			<video src={videoURL} controls autoplay loop />
 		{:else}
 			<span>{error?.message}</span>
 		{/if}
