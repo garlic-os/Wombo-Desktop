@@ -79,13 +79,16 @@
 	label {
 		width: 38rem;
 		max-width: 100%;
-		height: 7.5rem;
 		background-color: green; /* TODO: Random color gradient */
-		border-radius: 30px;
+		border-radius: 40px;
 		border: 3px solid black;
 		cursor: pointer;
 		color: white;
 		margin-bottom: 1rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		filter: saturate(75%);
+		text-shadow: 2px 2px black;
 
 		display: flex;
 		align-items: center;
@@ -96,7 +99,7 @@
 		border-color: white;
 	}
 
-	label:hover {
+	label:hover, label.selected {
 		filter: saturate(200%);
 	}
 
