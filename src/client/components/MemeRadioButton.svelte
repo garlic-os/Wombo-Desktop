@@ -1,14 +1,20 @@
 <script lang="ts">
 	import type { Maybe, Meme } from "../types";
+	import { generateGradient } from "../ui-gradients";
 
 	export let meme: Meme;
 	export let selectedMeme: Maybe<Meme> = undefined;
 	export let name = "";
 
 	let previewElement: Maybe<HTMLAudioElement>;
+	let mainElement: Maybe<HTMLLabelElement>;
 	let playing = false;
 	let isSelected = false;
 	let updatedRecently = false;
+
+	generateGradient("90deg").then( (gradient) => {
+		mainElement.setAttribute("style", `background: ${gradient}`);
+	});
 
 	function update(): void {
 		// This function inexplicably gets called twice for the component that
@@ -44,7 +50,9 @@
 
 <label class="meme-radio-button"
 	   class:selected={isSelected}
-	   on:click|preventDefault={ () => selectedMeme = meme }>
+	   bind:this={mainElement}
+	   on:click|preventDefault={ () => selectedMeme = meme }
+>
 	<input type="radio"
 		   value={meme.id}
 		   name={name}

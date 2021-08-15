@@ -1,5 +1,10 @@
 export type Maybe<T> = T | null | undefined;
 
+export type PageName = "upload"
+	                 | "select-meme"
+	                 | "generating"
+	                 | "result";
+
 export interface Meme {
 	name: string;
 	artist: string;
@@ -7,7 +12,7 @@ export interface Meme {
 	comment?: string;
 }
 
-export type PageName = "upload"
-	                 | "select-meme"
-	                 | "generating"
-	                 | "result";
+export interface Gradient {
+	name: string;
+	colors: string[];
+};
