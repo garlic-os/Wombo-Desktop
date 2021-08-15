@@ -12,6 +12,7 @@
 	import MemeRadioButton from "./MemeRadioButton.svelte";
 	import NextButton from "./NextButton.svelte";
 	import BackButton from "./BackButton.svelte";
+	import ProgressBar from "./ProgressBar.svelte";
 
 	// Show errors in an error banner
 	onMount( () => {
@@ -30,11 +31,14 @@
 	let image: Maybe<File>;
 	let page: PageName = "upload";
 	let selectedMeme: Maybe<Meme>;
-	let progressMessage = defaultProgressMessage;
 	let videoURL: Maybe<string>;
 	let error: Maybe<Error>;
+	let progressMessage = defaultProgressMessage;
+	let progressLevel = 0;
+	let maxProgress = 8;
 
 	const fadeParams = { duration: 250 };
+	$: progressPercent = 100 * progressLevel / maxProgress;
 
 	// Load memes.json
 	const memesLoaded = fetch("../memes.json")
@@ -47,20 +51,27 @@
 		if (image.type !== "image/jpeg") {
 			progressMessage = "Converting image...";
 			image = await convert2jpg(image);
+			maxProgress = 9;
+			++progressLevel;
+		} else {
+			maxProgress = 8;
 		}
 
 		// Send the request to Wombo and go to the processing page.
 		// generateMeme()'s callback will update the progress message in real
 		// time.
 		const videoURLPromise = generateMeme(image, selectedMeme?.id, (msg) => {
+			if (msg !== "Pending...") ++progressLevel;
 			progressMessage = msg;
 		});
 		page = "generating";
+		++progressLevel;
 
 		// Wait until the video is finished generating (or something goes wrong)
 		// and then advance to the page that shows the video to the user.
 		try {
 			videoURL = await videoURLPromise;
+			progressLevel = maxProgress;
 		} catch (err) {
 			error = err;
 		}
@@ -68,6 +79,7 @@
 
 		// Reset the progress message for next time.
 		progressMessage = defaultProgressMessage;
+		progressLevel = 0;
 	}
 </script>
 
@@ -90,7 +102,7 @@
 	{:else if page == "select-meme"}
 	<section transition:fade={fadeParams}>
 		{#await memesLoaded}
-			<p>Loading memes...</p>
+			<p class="progress">Loading memes...</p>
 		{:then memes}
 			<div class="meme-list">
 				{#each memes as item}
@@ -113,7 +125,9 @@
 	</section>
 
 	{:else if page == "generating"}
-	<section transition:fade={fadeParams}>
+	<section transition:fade={fadeParams} class="center">
+		<p class="progress">Your Wombo is<br />being created!</p>
+		<ProgressBar bind:progressPercent={progressPercent} />
 		<p>{progressMessage}</p>
 
 		<BackButton icon="x" on:click={ () => page = "select-meme" }>
@@ -191,6 +205,11 @@
 					 10px 10px 0px var(--blue);
 	}
 
+	.progress {
+		font-family: "Yeyey", sans-serif;
+		color: var(--green-2);
+		font-size: 24pt;
+	}
 	video {
 		height: calc(100vh - 4rem);
 		max-width: 100vw;
