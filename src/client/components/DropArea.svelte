@@ -147,9 +147,8 @@
 	}
 
 	img {
-		max-height: 100%;
 		max-width: 100%;
-		width: auto;
-		height: auto;
+		height: 100%;
+		object-fit: contain;
 	}
 </style>
