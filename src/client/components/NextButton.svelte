@@ -1,12 +1,22 @@
 <script lang="ts">
+	import type { Maybe } from "../types";
 	import { fly } from "svelte/transition";
+
+	export let href: Maybe<string> = null;
+	export let downloadURL: Maybe<string> = null;
+	export let target: Maybe<string> = null;
 </script>
 
 
 
-<button transition:fly="{{ x: window.innerWidth, duration: 500 }}" on:click>
-	<slot></slot>
-</button>
+<a class="next-button"
+   transition:fly="{{ x: window.innerWidth, duration: 500 }}"
+   on:click
+   href={href} download={downloadURL}
+   target={target}
+>
+	<slot />
+</a>
 
 
 
@@ -29,12 +39,17 @@
 		}
 	}
 
-	button:active {
+	.next-button:active {
 		transform: scale(95%);
 	}
 
-	button {
-		position: absolute;
+	.next-button:hover {
+		/* Override default anchor style */
+		text-decoration: none;
+	}
+
+	.next-button {
+		position: fixed;
 		right: 2rem; top: 0.8rem;
 
 		border: none;
@@ -47,11 +62,12 @@
 		font-weight: bold;
 		cursor: pointer;
 		color: white;
+		padding: 0.4em;
 		transition: transform 125ms;
 		z-index: 2;
 	}
 
-	button::before {
+	.next-button::before {
 		--bg-angle: 145deg;
 		content: "";
 		position: absolute;
