@@ -1,4 +1,6 @@
 <script lang="ts">
+import { onMount } from "svelte";
+
 	import type { Maybe, Meme } from "../types";
 	import { generateGradient } from "../ui-gradients";
 

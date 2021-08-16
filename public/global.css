@@ -10,18 +10,41 @@
 
 :root {
 	--red: #F71414;
-    --orange: #F78F14;
-    --yellow: #F6CB31;
-    --green: #33D625;
-    --blue: #3754F1;
+	--orange: #F78F14;
+	--yellow: #F6CB31;
+	--green: #33D625;
+	--blue: #3754F1;
 	--brown: #663216;
 
-    --orange-2: #FF7E36;
-    --green-2: #00F5A0;
+	--orange-2: #FF7E36;
+	--green-2: #00F5A0;
 }
 
 * {
 	box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 4px;
+	/* transition: width 125ms ease-out; */
+}
+/* ::-webkit-scrollbar-thumb:hover ~ ::-webkit-scrollbar {
+	width: 8px;
+} */
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #545454;
+	/* transition: background 125ms ease-out; */
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #cccccc;
 }
 
 html, body {

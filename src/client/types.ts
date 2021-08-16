@@ -16,3 +16,12 @@ export interface Gradient {
 	name: string;
 	colors: string[];
 };
+
+export interface S3Fields {
+	key: string;
+	AWSAccessKeyId: string;
+	policy: string;
+	signature: string;
+};
+
+export type ProgressCallback = (message: string) => void;

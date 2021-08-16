@@ -2,16 +2,13 @@
 	import type { Meme, Maybe, PageName } from "../types";
 
 	import { onMount } from "svelte";
-	import { fade } from "svelte/transition";
 	import { generateMeme } from "../wombo";
-	import convert2jpg from "../convert2jpg";
-
-	import DropArea from "./DropArea.svelte";
 	import ErrorBanner from "./ErrorBanner.svelte";
-	import MemeRadioButton from "./MemeRadioButton.svelte";
-	import NextButton from "./NextButton.svelte";
-	import BackButton from "./BackButton.svelte";
-	import ProgressBar from "./ProgressBar.svelte";
+
+	import UploadPage from "./pages/UploadPage.svelte";
+	import SelectMemePage from "./pages/SelectMemePage.svelte";
+	import GeneratingPage from "./pages/GeneratingPage.svelte";
+	import ResultPage from "./pages/ResultPage.svelte";
 
 	// Show errors in an error banner
 	onMount( () => {
@@ -27,61 +24,53 @@
 		});
 	});
 
-	const defaultProgressMessage = "Warming up...";
-	const fadeParams = { duration: 250 };
-
 	let mainElement: HTMLDivElement;
 	let image: Maybe<File>;
 	let page: PageName = "upload";
-	let selectedMeme: Maybe<Meme>;
+	let meme: Maybe<Meme>;
 	let videoURL: Maybe<string>;
 	let error: Maybe<Error>;
+
+	const defaultProgressMessage = "Warming up...";
 	let progressMessage = defaultProgressMessage;
 	let progressLevel = 0;
 	let maxProgress = 8;
-
+	let canceled = false;
 	$: progressPercent = 100 * progressLevel / maxProgress;
 
-	// Load memes.json
-	const memesLoaded = fetch("../memes.json")
-		.then(response => response.json() as Promise<Meme[]> );
 
-
-	async function submit() {
-		// Wombo only accepts JPGs. If the provided image is not a JPG, it must
-		// be converted before it can be sent to Wombo.
-		if (image.type !== "image/jpeg") {
-			progressMessage = "Converting image...";
-			image = await convert2jpg(image);
-			maxProgress = 9;
-			++progressLevel;
-		} else {
-			maxProgress = 8;
-		}
+	async function submitWombo(): Promise<boolean> {
+		canceled = false;
+		maxProgress = 8;
 
 		// Send the request to Wombo and go to the processing page.
 		// generateMeme()'s callback will update the progress message in real
 		// time.
-		const videoURLPromise = generateMeme(image, selectedMeme?.id, (msg) => {
+		const videoURLPromise = generateMeme(image, meme.id, (msg) => {
+			if (canceled) return;
+			if (msg === "Converting image...") maxProgress = 9;
 			if (msg !== "Pending...") ++progressLevel;
 			progressMessage = msg;
 		});
-		page = "generating";
 		++progressLevel;
 
 		// Wait until the video is finished generating (or something goes wrong)
 		// and then advance to the page that shows the video to the user.
 		try {
 			videoURL = await videoURLPromise;
-			progressLevel = maxProgress;
 		} catch (err) {
+			console.error(err);
 			error = err;
 		}
-		page = "result";
+		if (!canceled) {
+			progressLevel = maxProgress;
+		}
 
-		// Reset the progress message for next time.
+		// Reset progress for next time.
 		progressMessage = defaultProgressMessage;
 		progressLevel = 0;
+
+		return !canceled;
 	}
 </script>
 
@@ -91,102 +80,45 @@
 	<span class="logo header">Wombon't</span>
 
 	{#if page == "upload"}
-	<section transition:fade={fadeParams} class="center">
-		<DropArea bind:file={image} />
-
-		{#if image}
-			<NextButton on:click={ () => page = "select-meme" }>
-				Submit Face
-			</NextButton>
-		{/if}
-	</section>
+		<UploadPage on:submit={ (event) => {
+			        	image = event.detail;
+			        	page = "select-meme";
+			        }}
+		/>
 
 	{:else if page == "select-meme"}
-	<section transition:fade={fadeParams}>
-		{#await memesLoaded}
-			<p class="progress">Loading memes...</p>
-		{:then memes}
-			<div class="meme-list">
-				{#each memes as item}
-					<MemeRadioButton name="meme"
-									meme={item}
-									bind:selectedMeme />
-				{/each}
-			</div>
-		{/await}
-
-		{#if selectedMeme}
-			<NextButton on:click={submit}>
-				Choose Meme
-			</NextButton>
-		{/if}
-
-		<BackButton icon="undo" on:click={ () => page = "upload" }>
-			Choose new image
-		</BackButton>
-	</section>
+		<SelectMemePage on:back={ () => page = "upload" }
+			            on:submit={ async (event) => {
+			            	meme = event.detail;
+			            	page = "generating";
+			            	if (await submitWombo()) {
+			            		page = "result";
+							}
+			            }}
+		/>
 
 	{:else if page == "generating"}
-	<section transition:fade={fadeParams} class="center">
-		<p class="progress">Your Wombo is<br />being created!</p>
-		<ProgressBar bind:progressPercent={progressPercent} />
-		<p>{progressMessage}</p>
-
-		<BackButton icon="x" on:click={ () => page = "select-meme" }>
-			Cancel Wombo
-		</BackButton>
-	</section>
+		<GeneratingPage bind:progressMessage
+			            bind:progressPercent
+			            on:back={ () => {
+			            	page = "select-meme";
+			            	canceled = true;
+			            }}
+		/>
 
 	{:else if page == "result"}
-	<section transition:fade={fadeParams} class="center">
-		{#if videoURL}
-			<!-- svelte-ignore a11y-media-has-caption -->
-			<video src={videoURL} controls autoplay loop />
-		{:else}
-			<span>{error?.message}</span>
-		{/if}
+		<ResultPage bind:meme
+			        bind:videoURL
+			        bind:error
+			        on:back={ () => page = "select-meme" }
+		/>
 
-		<p class="song-name">{selectedMeme.artist} - {selectedMeme.name}</p>
-
-		<NextButton downloadURL={videoURL}>
-			Save
-		</NextButton>
-
-		<BackButton icon="home" on:click={ () => page = "select-meme" }>
-			Back to Memes
-		</BackButton>
-	</section>
 	{/if}
 </main>
 
 
 
 <style>
-	section {
-		position: absolute;
-		left: 0; top: 0;
-		width: 100%;
-		height: 100%;
-		transition: padding ease-out 500ms;
-		overflow: hidden auto;
-		padding-top: 4.75rem;
-
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-	}
-
-	@media only screen and (min-width: 800px) {
-		section {
-			padding-left: 25%;
-			padding-right: 25%;
-		}
-	}
-
-	section.center {
-		justify-content: center;
-	}
-
 	.header {
 		position: fixed;
 		left: 0; top: 0;
@@ -210,32 +142,5 @@
 			         6px 6px 0px var(--yellow),
 			         8px 8px 0px var(--green),
 					 10px 10px 0px var(--blue);
-	}
-
-	.progress {
-		font-family: "Yeyey", sans-serif;
-		color: var(--green-2);
-		font-size: 24pt;
-	}
-
-	.song-name {
-		font-weight: bold;
-		font-size: 3.5vh;
-		text-align: center;
-	}
-
-	video {
-		width: calc(100vh - 4rem);
-		height: calc(100vh - 4rem);
-		max-width: 90vw;
-		transition: width 500ms, height 500ms;
-		border-radius: 50px;
-	}
-
-	@media only screen and (min-height: 600px) {
-		video {
-			width: 72vh;
-			height: 72vh;
-		}
 	}
 </style>

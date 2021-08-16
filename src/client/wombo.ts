@@ -1,18 +1,11 @@
-interface S3Fields {
-	key: string;
-	AWSAccessKeyId: string;
-	policy: string;
-	signature: string;
-};
+import type { S3Fields, ProgressCallback } from "./types";
+import convert2jpg from "./convert2jpg";
 
-type ProgressCallback = (message: string) => void;
 const dummyCallback = (_: string): void => {};
-
 
 function delay(ms: number): Promise<void> {
 	return new Promise( (resolve) => setTimeout(resolve, ms) );
 }
-
 
 function capitalize(text: string): string {
 	return text[0].toUpperCase() + text.substring(1);
@@ -31,8 +24,14 @@ function capitalize(text: string): string {
 export async function generateMeme(
 	image: File,
 	memeID: number,
-	onProgressUpdate: ProgressCallback=dummyCallback
+	onProgressUpdate: ProgressCallback=dummyCallback,
 ): Promise<string> {
+	// Wombo only accepts JPGs. If the provided image is not a JPG, it must
+	// be converted before it can be sent to Wombo.
+	if (image.type !== "image/jpeg") {
+		onProgressUpdate("Converting image...");
+		image = await convert2jpg(image);
+	}
 
 	onProgressUpdate("Reserving upload location...");
 	const [ requestID, s3Fields ] = await reserveUploadLocation();

@@ -3,7 +3,7 @@
 	import { fly } from "svelte/transition";
 
 	export let href: Maybe<string> = null;
-	export let downloadURL: Maybe<string> = null;
+	export let download: Maybe<string> = null;
 	export let target: Maybe<string> = null;
 </script>
 
@@ -12,7 +12,8 @@
 <a class="next-button"
    transition:fly="{{ x: window.innerWidth, duration: 500 }}"
    on:click
-   href={href} download={downloadURL}
+   href={href}
+   download={download}
    target={target}
 >
 	<slot />
