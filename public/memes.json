@@ -2,869 +2,1934 @@
   {
     "id": 1,
     "name": "Never Gonna Give You Up",
-    "artist": "Rick Astley"
+    "artist": "Rick Astley",
+    "combo": false
   },
   {
     "id": 2,
     "name": "Dragostea Din Tei (Numa Numa)",
-    "artist": "O Zone"
+    "artist": "O Zone",
+    "combo": false
   },
   {
     "id": 3,
     "name": "Boom, Boom, Boom, Boom!!",
-    "artist": "Vengaboys"
+    "artist": "Vengaboys",
+    "combo": false
   },
   {
     "id": 4,
     "name": "Dreams",
-    "artist": "Fleetwood Mac"
+    "artist": "Fleetwood Mac",
+    "combo": false
   },
   {
     "id": 5,
     "name": "Baka Mitai",
-    "artist": "Yakuza"
+    "artist": "Yakuza",
+    "combo": false
   },
   {
     "id": 6,
     "name": "I Feel Good",
-    "artist": "James Brown"
+    "artist": "James Brown",
+    "combo": false
   },
   {
     "id": 7,
     "name": "Witch Doctor",
-    "artist": "Cartoons"
+    "artist": "Cartoons",
+    "combo": false
   },
   {
     "id": 8,
     "name": "Everytime We Touch",
-    "artist": "Cascada"
+    "artist": "Cascada",
+    "combo": false
   },
   {
     "id": 9,
     "name": "I Will Survive",
-    "artist": "Gloria Gaynor"
+    "artist": "Gloria Gaynor",
+    "combo": false
   },
   {
     "id": 10,
     "name": "Don't Cha",
-    "artist": "The Pussycat Dolls"
+    "artist": "The Pussycat Dolls",
+    "combo": false
   },
   {
     "id": 11,
     "name": "Tralala",
-    "artist": "Günther & The Sunshine Girls"
+    "artist": "Günther & The Sunshine Girls",
+    "combo": false
   },
   {
     "id": 12,
     "name": "Thriller",
-    "artist": "Michael Jackson"
+    "artist": "Michael Jackson",
+    "combo": false
   },
   {
     "id": 13,
     "name": "Bitch, Bitch, Bitch",
-    "artist": "Hailey Knox"
+    "artist": "Hailey Knox",
+    "combo": false
   },
   {
     "id": 14,
     "name": "I Will Always Love You",
-    "artist": "Whitney Houston"
+    "artist": "Whitney Houston",
+    "combo": false
   },
   {
     "id": 22,
     "name": "Happy Birthday",
-    "artist": "Patty and Mildred J. Hill"
+    "artist": "Patty and Mildred J. Hill",
+    "combo": false
   },
   {
     "id": 23,
     "name": "The Entertainer",
-    "artist": "Scott Joplin"
+    "artist": "Scott Joplin",
+    "combo": false
   },
   {
     "id": 24,
     "name": "Rockin' Robin",
-    "artist": "Bobby Day"
+    "artist": "Bobby Day",
+    "combo": false
   },
   {
     "id": 25,
     "name": "Rising Sun",
-    "artist": "The Animals"
+    "artist": "The Animals",
+    "combo": false
   },
   {
     "id": 26,
     "name": "The Elements",
-    "artist": "Tom Lehrer"
+    "artist": "Tom Lehrer",
+    "combo": false
   },
   {
     "id": 31,
     "name": "We're Not Gonna Take It",
-    "artist": "Twisted Sister"
+    "artist": "Twisted Sister",
+    "combo": false
   },
   {
     "id": 32,
     "name": "All Star",
-    "artist": "Smash Mouth"
+    "artist": "Smash Mouth",
+    "combo": false
   },
   {
     "id": 33,
     "name": "What Is Love",
-    "artist": "Haddaway"
+    "artist": "Haddaway",
+    "combo": false
   },
   {
     "id": 34,
     "name": "Chug Jug With You (\"Number One Victory Royale\" Song)",
-    "artist": "Leviathan"
+    "artist": "Leviathan",
+    "combo": false
   },
   {
     "id": 35,
     "name": "Hino Da Sociedade Esportiva Palmeiras",
-    "artist": "Oquestra e Côro Cid"
+    "artist": "Oquestra e Côro Cid",
+    "combo": false
   },
   {
     "id": 36,
     "name": "Dame Tu Cosita",
-    "artist": "El Chombo"
+    "artist": "El Chombo",
+    "combo": false
   },
   {
     "id": 37,
     "name": "Tunak Tunak Tun",
-    "artist": "Daler Mehndi"
+    "artist": "Daler Mehndi",
+    "combo": false
   },
   {
     "id": 38,
-    "name": "Bande OrganisÃ©e",
-    "artist": "Jul / Sch / Kofs / Naps / Soso maness / Elams / Solda / Houari"
+    "name": "Bande Organisée",
+    "artist": "Jul / Sch / Kofs / Naps / Soso maness / Elams / Solda / Houari",
+    "combo": false
   },
   {
     "id": 39,
     "name": "Y.M.C.A.",
-    "artist": "Village People"
+    "artist": "Village People",
+    "combo": false
   },
   {
     "id": 40,
     "name": "Funkytown",
-    "artist": "Lipps Inc."
+    "artist": "Lipps Inc.",
+    "combo": false
   },
   {
     "id": 41,
     "name": "Bing Bong",
-    "artist": "Borat"
+    "artist": "Borat",
+    "combo": false
   },
   {
     "id": 42,
     "name": "HEYYEYAAEYAAAEYAEYAA (Fabulous Secret Powers)",
-    "artist": "SLACKCiRCUS (Original by Four Non-Blondes)"
+    "artist": "SLACKCiRCUS (Original by Four Non-Blondes)",
+    "combo": false
   },
   {
     "id": 43,
     "name": "Take On Me",
-    "artist": "a-ha"
+    "artist": "a-ha",
+    "combo": false
   },
   {
     "id": 45,
     "name": "I Want It That Way",
-    "artist": "Backstreet Boys"
+    "artist": "Backstreet Boys",
+    "combo": false
   },
   {
     "id": 46,
     "name": "I'm Blue",
-    "artist": "Eiffel 65"
+    "artist": "Eiffel 65",
+    "combo": false
   },
   {
     "id": 47,
     "name": "It's Not Unusual",
-    "artist": "Tom Jones"
+    "artist": "Tom Jones",
+    "combo": false
   },
   {
     "id": 48,
     "name": "Friday",
-    "artist": "Rebecca Black"
+    "artist": "Rebecca Black",
+    "combo": false
   },
   {
     "id": 49,
     "name": "I Knew You Were Trouble",
-    "artist": "Taylor Swift"
+    "artist": "Taylor Swift",
+    "combo": false
   },
   {
     "id": 50,
     "name": "...Baby One More Time",
-    "artist": "Britney Spears"
+    "artist": "Britney Spears",
+    "combo": false
   },
   {
     "id": 51,
     "name": "Happy",
-    "artist": "Pharrell Williams"
+    "artist": "Pharrell Williams",
+    "combo": false
   },
   {
     "id": 52,
     "name": "Barbie Girl",
-    "artist": "Aqua"
+    "artist": "Aqua",
+    "combo": false
   },
   {
     "id": 53,
     "name": "Bidolibido",
-    "artist": "Vintage Culture"
+    "artist": "Vintage Culture",
+    "combo": false
   },
   {
     "id": 44,
     "name": "Bum Bum Tam Tam",
-    "artist": "MC Fioti"
+    "artist": "MC Fioti",
+    "combo": false
   },
   {
     "id": 54,
     "name": "Bum Bum Tam Tam (Extended)",
-    "artist": "MC Fioti"
+    "artist": "MC Fioti",
+    "combo": false
   },
   {
     "id": 55,
     "name": "Miami",
-    "artist": "Will Smith"
+    "artist": "Will Smith",
+    "combo": false
   },
   {
     "id": 56,
     "name": "Born This Way",
-    "artist": "Lady Gaga"
+    "artist": "Lady Gaga",
+    "combo": false
   },
   {
     "id": 57,
     "name": "bad guy",
-    "artist": "Billie Eilish"
+    "artist": "Billie Eilish",
+    "combo": false
   },
   {
     "id": 58,
     "name": "American Idiot",
-    "artist": "Green Day"
+    "artist": "Green Day",
+    "combo": false
   },
   {
     "id": 59,
     "name": "Your Man",
-    "artist": "Josh Turner"
+    "artist": "Josh Turner",
+    "combo": false
   },
   {
     "id": 60,
     "name": "Despacito",
-    "artist": "Luis Fonsi"
+    "artist": "Luis Fonsi",
+    "combo": false
   },
   {
     "id": 61,
     "name": "Cotton Eye Joe",
-    "artist": "Rednex"
+    "artist": "Rednex",
+    "combo": false
   },
   {
     "id": 62,
     "name": "My Way",
-    "artist": "Frank Sinatra"
+    "artist": "Frank Sinatra",
+    "combo": false
   },
   {
     "id": 63,
     "name": "Apna Time Aayega",
-    "artist": "Ranveer Singh"
+    "artist": "Ranveer Singh",
+    "combo": false
   },
   {
     "id": 64,
     "name": "Its Raining Men",
-    "artist": "The Weather Girls"
+    "artist": "The Weather Girls",
+    "combo": false
   },
   {
     "id": 65,
     "name": "Shake It Off",
-    "artist": "Taylor Swift"
+    "artist": "Taylor Swift",
+    "combo": false
   },
   {
     "id": 66,
     "name": "Chaccaron Maccaron",
-    "artist": "El Chombo"
+    "artist": "El Chombo",
+    "combo": false
   },
   {
     "id": 67,
     "name": "My Humps",
-    "artist": "Black Eyed Peas"
+    "artist": "Black Eyed Peas",
+    "combo": false
   },
   {
     "id": 68,
     "name": "Milkshake",
-    "artist": "Kelis"
+    "artist": "Kelis",
+    "combo": false
   },
   {
     "id": 69,
     "name": "X Gon' Give It To Ya",
-    "artist": "DMX"
+    "artist": "DMX",
+    "combo": false
   },
   {
     "id": 70,
     "name": "Rasputin",
-    "artist": "Boney M."
+    "artist": "Boney M.",
+    "combo": false
   },
   {
     "id": 71,
     "name": "Blinding Lights",
-    "artist": "The Weeknd"
+    "artist": "The Weeknd",
+    "combo": false
   },
   {
     "id": 72,
     "name": "In Da Club",
-    "artist": "50 Cent"
+    "artist": "50 Cent",
+    "combo": false
   },
   {
     "id": 73,
     "name": "Boombastic",
-    "artist": "Shaggy"
+    "artist": "Shaggy",
+    "combo": false
   },
   {
     "id": 74,
     "name": "Gasolina",
-    "artist": "Daddy Yankee"
+    "artist": "Daddy Yankee",
+    "combo": false
   },
   {
     "id": 75,
     "name": "Axel F",
-    "artist": "Crazy Frog (Original from Beverly Hills Cop)"
+    "artist": "Crazy Frog (Original from Beverly Hills Cop)",
+    "combo": false
   },
   {
     "id": 76,
     "name": "Another One Bites The Dust",
-    "artist": "Queen"
+    "artist": "Queen",
+    "combo": false
   },
   {
     "id": 77,
     "name": "Dont Start Now",
-    "artist": "Dua Lipa"
+    "artist": "Dua Lipa",
+    "combo": false
   },
   {
     "id": 78,
     "name": "Who Let The Dogs Out",
-    "artist": "Baha Men"
+    "artist": "Baha Men",
+    "combo": false
   },
   {
     "id": 79,
     "name": "Show Das Poderosas",
-    "artist": "Anitta"
+    "artist": "Anitta",
+    "combo": false
   },
   {
     "id": 80,
     "name": "Pepa No Funk",
-    "artist": "Blackbear / DJ Nuzin"
+    "artist": "Blackbear / DJ Nuzin",
+    "combo": false
   },
   {
     "id": 81,
     "name": "Chaar Botal Vodka",
-    "artist": "Yo Yo Honey Singh"
+    "artist": "Yo Yo Honey Singh",
+    "combo": false
   },
   {
     "id": 82,
     "name": "Nemashanmah Herati",
-    "artist": "Khele Galbah"
+    "artist": "Khele Galbah",
+    "combo": false
   },
   {
     "id": 83,
     "name": "Because I Got High",
-    "artist": "Afroman"
+    "artist": "Afroman",
+    "combo": false
   },
   {
     "id": 84,
     "name": "Smoke Weed Everyday",
-    "artist": "Snoop Dogg"
+    "artist": "Snoop Dogg",
+    "combo": false
   },
   {
     "id": 85,
     "name": "Mary Jane",
-    "artist": "Rick James"
+    "artist": "Rick James",
+    "combo": false
   },
   {
     "id": 86,
     "name": "Three Little Birds",
-    "artist": "Bob Marley"
+    "artist": "Bob Marley",
+    "combo": false
   },
   {
     "id": 87,
     "name": "2 Joints",
-    "artist": "SPM"
+    "artist": "SPM",
+    "combo": false
   },
   {
     "id": 89,
     "name": "Have You Ever Had A Dream",
-    "artist": "Goodnight Moon"
+    "artist": "Goodnight Moon",
+    "combo": false
   },
   {
     "id": 90,
     "name": "Heat Waves",
-    "artist": "Glass Animals"
+    "artist": "Glass Animals",
+    "combo": false
   },
   {
     "id": 91,
     "name": "Tell Me You Know",
-    "artist": "Good Kid"
+    "artist": "Good Kid",
+    "combo": false
   },
   {
     "id": 92,
     "name": "U Cant Touch This",
-    "artist": "MC Hammer"
+    "artist": "MC Hammer",
+    "combo": false
   },
   {
     "id": 93,
     "name": "K.O.",
-    "artist": "Pabllo Vittar"
+    "artist": "Pabllo Vittar",
+    "combo": false
   },
   {
     "id": 94,
     "name": "La Bamba",
-    "artist": "Los Lobos"
+    "artist": "Los Lobos",
+    "combo": false
   },
   {
     "id": 95,
     "name": "Rowdy Baby",
-    "artist": "Dhanush & Dhee"
+    "artist": "Dhanush & Dhee",
+    "combo": false
   },
   {
     "id": 96,
     "name": "Tujhe Dekha To",
-    "artist": "Dilwale Dulhania Le Jayenge"
+    "artist": "Dilwale Dulhania Le Jayenge",
+    "combo": false
   },
   {
     "id": 97,
     "name": "Watskeburt",
-    "artist": "De Jeugd Van Tegenwoordig"
+    "artist": "De Jeugd Van Tegenwoordig",
+    "combo": false
   },
   {
     "id": 98,
     "name": "Drank & Drugs",
-    "artist": "Lil Kleine / Ronnie Flex"
+    "artist": "Lil Kleine / Ronnie Flex",
+    "combo": false
   },
   {
     "id": 99,
     "name": "Zaman",
-    "artist": "Sundari - The Indian Goddess"
+    "artist": "Sundari - The Indian Goddess",
+    "combo": false
   },
   {
     "id": 100,
     "name": "It's The Time To Disco",
-    "artist": "Vasubdhara Das / Kay Kay / Shaan / Loy Mendonsa"
+    "artist": "Vasubdhara Das / Kay Kay / Shaan / Loy Mendonsa",
+    "combo": false
   },
   {
     "id": 101,
     "name": "Heb Je Even Voor Mij",
-    "artist": "Frans Bauer"
+    "artist": "Frans Bauer",
+    "combo": false
   },
   {
     "id": 102,
     "name": "Olha A Explosão",
-    "artist": "MC Kevinho"
+    "artist": "MC Kevinho",
+    "combo": false
   },
   {
     "id": 103,
     "name": "Ai Se Eu Te Pego",
-    "artist": "Michel Teló"
+    "artist": "Michel Teló",
+    "combo": false
   },
   {
     "id": 104,
     "name": "Around The World",
-    "artist": "Daft Punk"
+    "artist": "Daft Punk",
+    "combo": false
   },
   {
     "id": 105,
     "name": "How Deep Is Your Love",
-    "artist": "Bee Gees"
+    "artist": "Bee Gees",
+    "combo": false
   },
   {
     "id": 106,
     "name": "Turn Down For What",
-    "artist": "DJ Snake / Lil Jon"
+    "artist": "DJ Snake / Lil Jon",
+    "combo": false
   },
   {
     "id": 108,
     "name": "Baby Got Back",
-    "artist": "Sir Mix-A-Lot"
+    "artist": "Sir Mix-A-Lot",
+    "combo": false
   },
   {
     "id": 110,
     "name": "Marchas",
-    "artist": "Carnaval Ao Vivo"
+    "artist": "Carnaval Ao Vivo",
+    "combo": false
   },
   {
     "id": 112,
     "name": "Carry On Wayward Son",
-    "artist": "Kansas"
+    "artist": "Kansas",
+    "combo": false
   },
   {
     "id": 114,
     "name": "drivers license",
-    "artist": "Olivia Rodrigo"
+    "artist": "Olivia Rodrigo",
+    "combo": false
   },
   {
     "id": 115,
     "name": "Get Lucky",
-    "artist": "Daft Punk"
+    "artist": "Daft Punk",
+    "combo": false
   },
   {
     "id": 116,
     "name": "Gettin' Jiggy Wit It",
-    "artist": "Will Smith"
+    "artist": "Will Smith",
+    "combo": false
   },
   {
     "id": 117,
     "name": "Girls Just Want To Have Fun",
-    "artist": "Cyndi Lauper"
+    "artist": "Cyndi Lauper",
+    "combo": false
   },
   {
     "id": 119,
     "name": "Hollaback Girl",
-    "artist": "Gwen Stefani"
+    "artist": "Gwen Stefani",
+    "combo": false
   },
   {
     "id": 120,
     "name": "Kala Chashma",
-    "artist": "Mixed"
+    "artist": "Mixed",
+    "combo": false
   },
   {
     "id": 121,
     "name": "Karma Chameleon",
-    "artist": "Culture Club"
+    "artist": "Culture Club",
+    "combo": false
   },
   {
     "id": 122,
     "name": "Lose Yourself",
-    "artist": "Eminem"
+    "artist": "Eminem",
+    "combo": false
   },
   {
     "id": 124,
     "name": "Mamma Mia",
-    "artist": "ABBA"
+    "artist": "ABBA",
+    "combo": false
   },
   {
     "id": 125,
     "name": "Man's Not Hot",
-    "artist": "Big Shaq"
+    "artist": "Big Shaq",
+    "combo": false
   },
   {
     "id": 127,
     "name": "New Rules",
-    "artist": "Dua Lipa"
+    "artist": "Dua Lipa",
+    "combo": false
   },
   {
     "id": 129,
     "name": "Pump Up The Jam",
-    "artist": "KOAN Sound / Technotronic"
+    "artist": "KOAN Sound / Technotronic",
+    "combo": false
   },
   {
     "id": 132,
     "name": "Run The World (Girls)",
-    "artist": "Beyoncé"
+    "artist": "Beyoncé",
+    "combo": false
   },
   {
     "id": 133,
     "name": "Sexyback",
-    "artist": "Justin Timberlake"
+    "artist": "Justin Timberlake",
+    "combo": false
   },
   {
     "id": 134,
     "name": "Smells Like Teen Spirit",
-    "artist": "Nirvana"
+    "artist": "Nirvana",
+    "combo": false
   },
   {
     "id": 135,
     "name": "Tokyo Drift",
-    "artist": "Teriyaki Boyz"
+    "artist": "Teriyaki Boyz",
+    "combo": false
   },
   {
     "id": 136,
     "name": "Vai Embrazando",
-    "artist": "MC Zaac"
+    "artist": "MC Zaac",
+    "combo": false
   },
   {
     "id": 137,
     "name": "We Are The Champions",
-    "artist": "Queen"
+    "artist": "Queen",
+    "combo": false
   },
   {
     "id": 139,
     "name": "Tommy",
-    "artist": "Yashraj Mukhate"
+    "artist": "Yashraj Mukhate",
+    "combo": false
   },
   {
     "id": 140,
     "name": "Badtameez Dil",
-    "artist": "Benny Dayal / Shefali Alvares"
+    "artist": "Benny Dayal / Shefali Alvares",
+    "combo": false
   },
   {
     "id": 142,
     "name": "Cafe Con Leche",
-    "artist": "El Presidente"
+    "artist": "El Presidente",
+    "combo": false
   },
   {
     "id": 143,
     "name": "Emosanal Attyachaar",
-    "artist": "Dev D."
+    "artist": "Dev D.",
+    "combo": false
   },
   {
     "id": 144,
     "name": "Kabhi Kabhi Mere Dil Mein",
-    "artist": "Amitabh Bachchan"
+    "artist": "Amitabh Bachchan",
+    "combo": false
   },
   {
     "id": 145,
     "name": "Kabhi Khushi Kabhie Gham",
-    "artist": "Lata Mangeshkar / Jatin-Lalit"
+    "artist": "Lata Mangeshkar / Jatin-Lalit",
+    "combo": false
   },
   {
     "id": 146,
     "name": "Hare Tari Madhuri Murti (Kal Ho Naa Ho Title Track)",
-    "artist": "Sanskardham Gurukul"
+    "artist": "Sanskardham Gurukul",
+    "combo": false
   },
   {
     "id": 147,
     "name": "Queen",
-    "artist": "Neha Kakkar"
+    "artist": "Neha Kakkar",
+    "combo": false
   },
   {
     "id": 148,
     "name": "M To The B",
-    "artist": "Millie B"
+    "artist": "Millie B",
+    "combo": false
   },
   {
     "id": 150,
     "name": "Pyar Hua Iqrar Hua",
-    "artist": "Mann Dey / Lata Mangeshkar"
+    "artist": "Mann Dey / Lata Mangeshkar",
+    "combo": false
   },
   {
     "id": 151,
     "name": "Wiggle",
-    "artist": "Jason Derulo"
+    "artist": "Jason Derulo",
+    "combo": false
   },
   {
     "id": 152,
     "name": "Womanizer",
-    "artist": "Britney Spears"
+    "artist": "Britney Spears",
+    "combo": false
   },
   {
     "id": 153,
     "name": "Wonderwall",
-    "artist": "Oasis"
+    "artist": "Oasis",
+    "combo": false
   },
   {
     "id": 155,
     "name": "Kokila Ben",
-    "artist": "Yashraj Mukhate"
+    "artist": "Yashraj Mukhate",
+    "combo": false
   },
   {
     "id": 156,
     "name": "Sugarcrash",
-    "artist": "EllyOtto"
+    "artist": "EllyOtto",
+    "combo": false
   },
   {
     "id": 157,
     "name": "Danza Kuduro",
-    "artist": "Lucenzo (feat. Don Omar)"
+    "artist": "Lucenzo (feat. Don Omar)",
+    "combo": false
   },
   {
     "id": 158,
     "name": "Ilariê",
-    "artist": "Xuxa"
+    "artist": "Xuxa",
+    "combo": false
   },
   {
     "id": 159,
     "name": "Mama I Love You",
-    "artist": "Spice Girls"
+    "artist": "Spice Girls",
+    "combo": false
   },
   {
     "id": 160,
     "name": "Motherlover",
-    "artist": "The Lonely Island"
+    "artist": "The Lonely Island",
+    "combo": false
   },
   {
     "id": 162,
     "name": "Stacy's Mom",
-    "artist": "Fountains of Wayne"
+    "artist": "Fountains of Wayne",
+    "combo": false
   },
   {
     "id": 163,
     "name": "Stewie: Mum!",
-    "artist": "Family Guy"
+    "artist": "Family Guy",
+    "combo": false
   },
   {
     "id": 164,
     "name": "I'm A Cool Mom",
-    "artist": "Mean Girls"
+    "artist": "Mean Girls",
+    "combo": false
   },
   {
     "id": 165,
     "name": "Xtasy",
-    "artist": "DJ PRESS PLAY"
+    "artist": "DJ PRESS PLAY",
+    "combo": false
   },
   {
     "id": 166,
     "name": "Astronaut in the Ocean",
-    "artist": "Masked Wolf"
+    "artist": "Masked Wolf",
+    "combo": false
   },
   {
     "id": 167,
     "name": "Bad Reputation",
-    "artist": "Joan Jett / The Blackhearts"
+    "artist": "Joan Jett / The Blackhearts",
+    "combo": false
   },
   {
     "id": 169,
     "name": "Dromen Zijn Bedrog",
-    "artist": "Marco Borsato"
+    "artist": "Marco Borsato",
+    "combo": false
   },
   {
     "id": 170,
     "name": "Bagagedrager",
-    "artist": "Gers Pardoel"
+    "artist": "Gers Pardoel",
+    "combo": false
   },
   {
     "id": 171,
     "name": "How You Like That",
-    "artist": "Blackpink"
+    "artist": "Blackpink",
+    "combo": false
   },
   {
     "id": 174,
     "name": "Pawri Hori Hai",
-    "artist": "Dananeer / Yashraj"
+    "artist": "Dananeer / Yashraj",
+    "combo": false
   },
   {
     "id": 175,
     "name": "Sheesh",
-    "artist": "Sound Effect"
+    "artist": "Sound Effect",
+    "combo": false
   },
   {
     "id": 177,
     "name": "TiK ToK",
-    "artist": "Ke$ha"
+    "artist": "Ke$ha",
+    "combo": false
+  },
+  {
+    "id": 178,
+    "name": "7th Element",
+    "artist": "Vitas",
+    "combo": false
   },
   {
     "id": 180,
-    "name": "Among Us Rant (Stop Posting About Among Us)",
-    "artist": "biggayrapper"
+    "name": "Among Us Rant",
+    "artist": "biggayrapper",
+    "combo": false
   },
   {
     "id": 181,
     "name": "Dynamite",
-    "artist": "BTS"
+    "artist": "BTS",
+    "combo": false
   },
   {
     "id": 182,
     "name": "DNA",
-    "artist": "BTS"
+    "artist": "BTS",
+    "combo": false
   },
   {
     "id": 183,
     "name": "It's My Life",
-    "artist": "Vennu Mallesh"
+    "artist": "Vennu Mallesh",
+    "combo": false
   },
   {
     "id": 184,
     "name": "Scatman",
-    "artist": "Scatman John"
+    "artist": "Scatman John",
+    "combo": false
   },
   {
     "id": 185,
     "name": "Toilet",
     "artist": "Eldzhey",
-    "comment": "60 FPS"
+    "comment": "60 FPS",
+    "combo": false
   },
   {
     "id": 186,
     "name": "Body",
-    "artist": "Megan Thee Stallion"
+    "artist": "Megan Thee Stallion",
+    "combo": false
   },
   {
     "id": 187,
     "name": "Oh No",
-    "artist": "Kreepa"
+    "artist": "Kreepa",
+    "combo": false
   },
   {
     "id": 193,
     "name": "The Safety Dance",
-    "artist": "Men Without Hats"
+    "artist": "Men Without Hats",
+    "combo": false
   },
   {
     "id": 194,
     "name": "Runaway",
-    "artist": "AURORA"
+    "artist": "AURORA",
+    "combo": false
   },
   {
     "id": 196,
     "name": "Mundian To Bach Ke",
-    "artist": "Panjabi MC"
+    "artist": "Panjabi MC",
+    "combo": false
+  },
+  {
+    "id": 197,
+    "name": null,
+    "artist": null,
+    "combo": false
   },
   {
     "id": 199,
     "name": "Gimme More",
-    "artist": "Britney Spears"
+    "artist": "Britney Spears",
+    "combo": false
+  },
+  {
+    "id": 205,
+    "name": "L'estasi Dell'oro",
+    "artist": "Ennio Morricone",
+    "combo": false
   },
   {
     "id": 206,
     "name": "California Gurls",
-    "artist": "Katy Perry"
+    "artist": "Katy Perry",
+    "combo": false
   },
   {
     "id": 211,
     "name": "Leave the Door Open",
-    "artist": "Bruno Mars"
+    "artist": "Bruno Mars",
+    "combo": false
   },
   {
     "id": 212,
     "name": "Look At Me Now",
     "artist": "Chris Brown",
-    "comment": "Premium"
+    "comment": "Premium",
+    "combo": false
+  },
+  {
+    "id": 214,
+    "name": "MONTERO (Call Me By Your Name)",
+    "artist": "Lil Nas X",
+    "combo": false
+  },
+  {
+    "id": 216,
+    "name": "Respect",
+    "artist": "Aretha Franklin",
+    "combo": false
   },
   {
     "id": 218,
     "name": "Stressed Out",
-    "artist": "21 Pilots"
+    "artist": "21 Pilots",
+    "combo": false
+  },
+  {
+    "id": 219,
+    "name": "The Duck Song",
+    "artist": "Bryant Oden",
+    "combo": false
   },
   {
     "id": 222,
     "name": "F.U.N. Song",
     "artist": "SpongeBob SquarePants",
-    "comment": "60 FPS"
+    "comment": "60 FPS",
+    "combo": false
   },
   {
     "id": 225,
     "name": "Gangnam Style",
-    "artist": "Psy"
+    "artist": "Psy",
+    "combo": false
+  },
+  {
+    "id": 229,
+    "name": "Wellerman (Sea Shanty)",
+    "artist": "Nathan Evans",
+    "combo": false
+  },
+  {
+    "id": 230,
+    "name": "Alors On Danse",
+    "artist": "Stromae",
+    "combo": false
+  },
+  {
+    "id": 232,
+    "name": "Almost There",
+    "artist": "The Princess and the Frog",
+    "combo": false
   },
   {
     "id": 233,
     "name": "Baby Shark",
     "artist": "Pinkfong",
-    "comment": "60 FPS"
+    "comment": "60 FPS",
+    "combo": false
   },
   {
     "id": 234,
     "name": "I'm a Gummy Bear",
     "artist": "Gummibär",
-    "comment": "60 FPS"
+    "comment": "60 FPS",
+    "combo": false
+  },
+  {
+    "id": 236,
+    "name": "I Like To Move It",
+    "artist": "Madagascar",
+    "combo": false
   },
   {
     "id": 237,
     "name": "Nyan Cat (Nyanyanyanyanyanyanya!)",
     "artist": "daniwell",
-    "comment": "60 FPS"
+    "comment": "60 FPS",
+    "combo": false
   },
   {
     "id": 238,
     "name": "Peanut Butter Jelly Time",
     "artist": "Buckwheat Boyz",
-    "comment": "60 FPS"
+    "comment": "60 FPS",
+    "combo": false
   },
   {
     "id": 240,
     "name": "We Are Number One",
     "artist": "LazyTown",
-    "comment": "60 FPS"
+    "comment": "60 FPS",
+    "combo": false
+  },
+  {
+    "id": 241,
+    "name": "Thrift Shop",
+    "artist": "Mackelmore / Ryan Lewis (feat. Wanz)",
+    "comment": "unlisted",
+    "combo": false
+  },
+  {
+    "id": 242,
+    "name": "I'll Be There For You (F.R.I.E.N.D.S. Theme)",
+    "artist": "The Rembrandts",
+    "combo": false
+  },
+  {
+    "id": 243,
+    "name": "Day 'N' Nite",
+    "artist": "Kid Cudi",
+    "combo": false
+  },
+  {
+    "id": 244,
+    "name": "good 4 u",
+    "artist": "Olivia Rodrigo",
+    "combo": false
   },
   {
     "id": 245,
     "name": "Tusa",
-    "artist": "Karol G & Nicki Minaj"
+    "artist": "Karol G & Nicki Minaj",
+    "combo": false
+  },
+  {
+    "id": 247,
+    "name": "Castaways",
+    "artist": "The Backyardigans",
+    "combo": false
   },
   {
     "id": 248,
     "name": "Money Money Money",
-    "artist": "ABBA"
+    "artist": "ABBA",
+    "combo": false
+  },
+  {
+    "id": 249,
+    "name": "Into the Thick of It",
+    "artist": "The Backyardigans",
+    "combo": false
+  },
+  {
+    "id": 250,
+    "name": "Pyar Hua Iqrar Hua",
+    "artist": "Shree 420",
+    "combo": false
+  },
+  {
+    "id": 251,
+    "name": "Somebody That I Used to Know",
+    "artist": "Gotye (feat. Kimbra)",
+    "combo": false
+  },
+  {
+    "id": 253,
+    "name": "Because of You",
+    "artist": "Kelly Clarkson",
+    "combo": false
+  },
+  {
+    "id": 256,
+    "name": "P.P.A.P. (Pen Pineapple Apple Pen)",
+    "artist": "PIKOTARO",
+    "combo": false
+  },
+  {
+    "id": 257,
+    "name": "Brown Munde",
+    "artist": "AP Dhillon / Gminxr / Gurinder Gill / Shinda Kahlon",
+    "combo": false
+  },
+  {
+    "id": 258,
+    "name": "Hold It Against Me",
+    "artist": "Britney Spears",
+    "combo": false
+  },
+  {
+    "id": 259,
+    "name": "Super Bass",
+    "artist": "Nicki Minaj",
+    "combo": false
   },
   {
     "id": 263,
     "name": "Run To The Hills",
-    "artist": "Iron Maiden"
+    "artist": "Iron Maiden",
+    "combo": false
+  },
+  {
+    "id": 264,
+    "name": "Destination Calabria",
+    "artist": "Alex Gaudino (feat. Crystal Waters)",
+    "combo": false
+  },
+  {
+    "id": 267,
+    "name": "What Does The Fox Say",
+    "artist": "Ylvis",
+    "combo": false
+  },
+  {
+    "id": 269,
+    "name": "Run",
+    "artist": "OneRepublic",
+    "comment": "60 FPS",
+    "combo": false
+  },
+  {
+    "id": 270,
+    "name": "Dance Monkey",
+    "artist": "Tones And I",
+    "comment": "60 FPS",
+    "combo": false
+  },
+  {
+    "id": 271,
+    "name": "International Superspy",
+    "artist": "The Backyardigans",
+    "combo": false
+  },
+  {
+    "id": 272,
+    "name": "Good Riddance (Time of Your Live)",
+    "artist": "Green Day",
+    "combo": false
+  },
+  {
+    "id": 274,
+    "name": "Pika Pika Pikachu",
+    "artist": "Detective Pikachu",
+    "combo": false
+  },
+  {
+    "id": 275,
+    "name": "Pokémon Theme Song",
+    "artist": "Pokémon",
+    "combo": false
+  },
+  {
+    "id": 278,
+    "name": "Nobody",
+    "artist": "Mitski",
+    "combo": false
+  },
+  {
+    "id": 280,
+    "name": "Seaside_Demo",
+    "artist": "SEB",
+    "combo": false
+  },
+  {
+    "id": 281,
+    "name": "Kiss Me More",
+    "artist": "Doja Cat (feat. SZA)",
+    "combo": false
+  },
+  {
+    "id": 284,
+    "name": "Party Rock Anthem",
+    "artist": "LMFAO",
+    "combo": false
+  },
+  {
+    "id": 286,
+    "name": "Threw it on the Ground",
+    "artist": "The Lonely Island",
+    "combo": false
+  },
+  {
+    "id": 287,
+    "name": "Poof Be Gone",
+    "artist": "KyleYouMadeThat / Yung Baby Tate / Yvette (feat. Cheerlebridee)",
+    "combo": false
+  },
+  {
+    "id": 289,
+    "name": "Aarambh He Prachand",
+    "artist": "Rahul Ram",
+    "combo": false
+  },
+  {
+    "id": 290,
+    "name": "Charsulli Gardulli",
+    "artist": "Yashraj Mukhate",
+    "combo": false
+  },
+  {
+    "id": 293,
+    "name": "Neckless",
+    "artist": "Saaff",
+    "combo": false
+  },
+  {
+    "id": 294,
+    "name": "O O Jaane Jaana",
+    "artist": "Kamaal Khan",
+    "combo": false
+  },
+  {
+    "id": 296,
+    "name": "Uden Jab Jab Zulfen Teri",
+    "artist": "Naya Daur",
+    "combo": false
+  },
+  {
+    "id": 298,
+    "name": "Paani Paani",
+    "artist": "Badshah / Aastha Gill",
+    "combo": false
+  },
+  {
+    "id": 299,
+    "name": "Baby Shark",
+    "artist": "Pinkfong",
+    "combo": false
+  },
+  {
+    "id": 300,
+    "name": "American Pie",
+    "artist": "Don McLean",
+    "combo": false
+  },
+  {
+    "id": 301,
+    "name": "Born In The USA",
+    "artist": "Bruce Springsteen",
+    "combo": false
+  },
+  {
+    "id": 302,
+    "name": "Living In America",
+    "artist": "James Brown",
+    "comment": "unlisted",
+    "combo": false
+  },
+  {
+    "id": 303,
+    "name": "Party in the USA",
+    "artist": "Miley Cyrus",
+    "combo": false
+  },
+  {
+    "id": 304,
+    "name": "Star Spangled Banner (US National Anthem)",
+    "artist": "John Stafford Smith / Francis Scott Key",
+    "comment": "unlisted",
+    "combo": false
+  },
+  {
+    "id": 305,
+    "name": "Sweet Home Alabama",
+    "artist": "Lynyrd Skynyrd",
+    "combo": false
+  },
+  {
+    "id": 306,
+    "name": "Sip Sip",
+    "artist": "Jasmine Sandlas (feat. Intense)",
+    "combo": false
+  },
+  {
+    "id": 308,
+    "name": "Mere Sapno Ki Rani",
+    "artist": "Kishore Kumar",
+    "combo": false
+  },
+  {
+    "id": 309,
+    "name": "Non, Je Ne Regrette Rien",
+    "artist": "Edith Piaf",
+    "combo": false
+  },
+  {
+    "id": 310,
+    "name": "Papaoutai",
+    "artist": "Stromae",
+    "combo": false
+  },
+  {
+    "id": 311,
+    "name": "La Vie En Rose",
+    "artist": "Edith Piaf",
+    "combo": false
+  },
+  {
+    "id": 313,
+    "name": "Papa Kehte Hain",
+    "artist": "Udit Narayan",
+    "combo": false
+  },
+  {
+    "id": 314,
+    "name": "Pozovi Menya S Soboy",
+    "artist": "Alla Pugacheva",
+    "combo": false
+  },
+  {
+    "id": 315,
+    "name": null,
+    "artist": null,
+    "combo": false
+  },
+  {
+    "id": 316,
+    "name": "Vse Bydet Horosho (Everything Will Be Good)",
+    "artist": "Verka Serduchka",
+    "combo": false
+  },
+  {
+    "id": 325,
+    "name": "Paw Patrol Theme",
+    "artist": "Paw Patrol",
+    "combo": false
+  },
+  {
+    "id": 326,
+    "name": "Video Killed the Radio Star",
+    "artist": "The Buggies",
+    "combo": false
+  },
+  {
+    "id": 327,
+    "name": "Eat It",
+    "artist": "Weird Al Yankovik",
+    "combo": false
+  },
+  {
+    "id": 500,
+    "name": "Get Low (To the Window, To the Wall)",
+    "artist": "Lil Jon / The East Side Boyz",
+    "combo": true
+  },
+  {
+    "id": 501,
+    "name": null,
+    "artist": null,
+    "combo": true
+  },
+  {
+    "id": 502,
+    "name": "Satisfaction",
+    "artist": "Benny Benassi",
+    "combo": true
+  },
+  {
+    "id": 503,
+    "name": "Wake Me Up Inside",
+    "artist": "Evanescence",
+    "combo": true
+  },
+  {
+    "id": 505,
+    "name": "Gasolina",
+    "artist": "Daddy Yankee",
+    "combo": true
+  },
+  {
+    "id": 506,
+    "name": "Bodies",
+    "artist": "Drowning Pool",
+    "combo": true
+  },
+  {
+    "id": 507,
+    "name": "Harder, Better, Faster, Stronger",
+    "artist": "Daft Punk",
+    "combo": true
+  },
+  {
+    "id": 508,
+    "name": "Gold Digger",
+    "artist": "Kanye West",
+    "combo": true
+  },
+  {
+    "id": 510,
+    "name": "Shallow",
+    "artist": "Bradley Cooper / Lady Gaga",
+    "combo": true
+  },
+  {
+    "id": 511,
+    "name": "Summer Nights (Tell Me More)",
+    "artist": "John Travolta / Olivia Newton-John",
+    "combo": true
+  },
+  {
+    "id": 512,
+    "name": "Aati Kya Khandala",
+    "artist": "Aamir Khan / Alka Yagnik / Jatin Lalit",
+    "comment": "60 FPS",
+    "combo": true
+  },
+  {
+    "id": 512,
+    "name": "Ho Jayegi Balle Balle",
+    "artist": "Daler Mehndi",
+    "comment": "60 FPS",
+    "combo": true
+  },
+  {
+    "id": 512,
+    "name": "Man's Not Hot",
+    "artist": "Big Shaq",
+    "combo": true
+  },
+  {
+    "id": 515,
+    "name": "Pappu Can't Dance",
+    "artist": "Jaane Tu Ya Jaane Na",
+    "comment": "60 FPS",
+    "combo": true
+  },
+  {
+    "id": 516,
+    "name": "Respect, Power, Banana",
+    "artist": "Minions",
+    "comment": "60 FPS",
+    "combo": true
+  },
+  {
+    "id": 518,
+    "name": "Small Potato Rock",
+    "artist": "Small Potatoes",
+    "comment": "60 FPS",
+    "combo": true
+  },
+  {
+    "id": 519,
+    "name": "Saade Dil Te Chhuriyan Chaliyan",
+    "artist": "Daler Mehndi",
+    "combo": true
+  },
+  {
+    "id": 520,
+    "name": "An Unfinished Novel",
+    "artist": "Irina Allegrova with Igor Krutoy",
+    "combo": true
+  },
+  {
+    "id": 523,
+    "name": "Señorita",
+    "artist": "Zindagi Na Milegi Dobara",
+    "combo": true
+  },
+  {
+    "id": 524,
+    "name": "4 Minutes",
+    "artist": "Madonna",
+    "combo": true
+  },
+  {
+    "id": 525,
+    "name": "Go Your Own Way",
+    "artist": "Fleetwood Mac",
+    "combo": true
+  },
+  {
+    "id": 527,
+    "name": "Constitutional Peasants",
+    "artist": "Monty Python",
+    "combo": true
+  },
+  {
+    "id": 528,
+    "name": "Breaking Free",
+    "artist": "High School Musical",
+    "combo": true
+  },
+  {
+    "id": 530,
+    "name": "Anything You Can Do",
+    "artist": "Annie Get Your Gun",
+    "combo": true
+  },
+  {
+    "id": 531,
+    "name": "(I've Had) The Time Of my Life",
+    "artist": "Bill Medley / Jennifer Warnes",
+    "combo": true
+  },
+  {
+    "id": 532,
+    "name": "Dancing in the Dark",
+    "artist": "Bruce Springsteen",
+    "combo": true
+  },
+  {
+    "id": 535,
+    "name": "Lady Love",
+    "artist": "ShortMAN",
+    "combo": true
+  },
+  {
+    "id": 536,
+    "name": "I Knew You Were Trouble (Goat)",
+    "artist": "Taylor Swift",
+    "combo": true
+  },
+  {
+    "id": 540,
+    "name": "Zara Sa Jhoom Loon Main",
+    "artist": "Asha Bhosle / Abhijeet",
+    "combo": true
+  },
+  {
+    "id": 541,
+    "name": "Nazrein Mili Dil Dhadka",
+    "artist": "Raja",
+    "combo": true
+  },
+  {
+    "id": 542,
+    "name": "Jai Ho",
+    "artist": "A.R. Rahman",
+    "combo": true
+  },
+  {
+    "id": 543,
+    "name": "Swag Se Swagat",
+    "artist": "Tiger Zinda Hai",
+    "combo": true
+  },
+  {
+    "id": 550,
+    "name": "America, Fuck Yeah",
+    "artist": "Team America",
+    "combo": true
+  },
+  {
+    "id": 551,
+    "name": "Kids in America",
+    "artist": "Kim Wilde",
+    "combo": true
+  },
+  {
+    "id": 552,
+    "name": "Dommage",
+    "artist": "Bigflo / Oli",
+    "combo": true
+  },
+  {
+    "id": 554,
+    "name": null,
+    "artist": null,
+    "combo": true
+  },
+  {
+    "id": 555,
+    "name": "No Air",
+    "artist": "Jordin Sparks / Chris Brown",
+    "combo": true
+  },
+  {
+    "id": 558,
+    "name": "Hakuna Matata",
+    "artist": "The Lion King",
+    "combo": true
+  },
+  {
+    "id": 562,
+    "name": "A Whole New World",
+    "artist": "Alladin",
+    "combo": true
+  },
+  {
+    "id": 564,
+    "name": "Two by Two",
+    "artist": "The Book of Mormon",
+    "combo": true
+  },
+  {
+    "id": 565,
+    "name": "Banana Phone",
+    "artist": "Raffi",
+    "combo": true
+  },
+  {
+    "id": 566,
+    "name": "Chase",
+    "artist": "VASSY / Bonka",
+    "combo": true
+  },
+  {
+    "id": 567,
+    "name": "Every Breath You Take",
+    "artist": "The Police",
+    "combo": true
+  },
+  {
+    "id": 568,
+    "name": "Gallan Goodiyaan",
+    "artist": "Dil Dhadakne Do",
+    "combo": true
+  },
+  {
+    "id": 569,
+    "name": "Bye Bye Bye",
+    "artist": "NSYNC",
+    "combo": true
+  },
+  {
+    "id": 570,
+    "name": "Toxic",
+    "artist": "Britney Spears",
+    "combo": true
+  },
+  {
+    "id": 571,
+    "name": "Boy With Luv",
+    "artist": "BTS (feat. Halsey)",
+    "combo": true
+  },
+  {
+    "id": 573,
+    "name": "Jalebi Baby (Baby Let Me See It)",
+    "artist": "Tesher",
+    "combo": true
+  },
+  {
+    "id": 574,
+    "name": "Kajra Re",
+    "artist": "Alisha Chinai / Shankar Mahadevan / Javed Ali",
+    "combo": true
+  },
+  {
+    "id": 575,
+    "name": "Kill This Love",
+    "artist": "Blackpink",
+    "combo": true
+  },
+  {
+    "id": 576,
+    "name": "Le Coach",
+    "artist": "Soprano (feat. Vincenzo)",
+    "combo": true
+  },
+  {
+    "id": 577,
+    "name": "My Humps",
+    "artist": "Black Eyed Peas",
+    "combo": true
+  },
+  {
+    "id": 578,
+    "name": "Kulikitaka",
+    "artist": "Toño Rosario",
+    "combo": true
+  },
+  {
+    "id": 580,
+    "name": "Diko Tusim",
+    "artist": "Danya Milokhin / Nikolay Baskov",
+    "combo": true
+  },
+  {
+    "id": 581,
+    "name": "Crush",
+    "artist": "Klava Koka / NILETTO",
+    "combo": true
+  },
+  {
+    "id": 582,
+    "name": "Blackout",
+    "artist": "Anthony Ramos et. al.",
+    "combo": true
+  },
+  {
+    "id": 583,
+    "name": "Combination Pizza Hut and Taco Bell (TikTok Remix)",
+    "artist": "Das Racist",
+    "combo": true
+  },
+  {
+    "id": 584,
+    "name": "Permission to Dance",
+    "artist": "BTS",
+    "combo": true
+  },
+  {
+    "id": 585,
+    "name": "Afro Trap Part 7 (La Puissance)",
+    "artist": "MHD",
+    "combo": true
+  },
+  {
+    "id": 586,
+    "name": "All Eyes On Me",
+    "artist": "Bo Burnham",
+    "combo": true
+  },
+  {
+    "id": 587,
+    "name": "Chantaje",
+    "artist": "Shakira (feat. Maluma)",
+    "comment": "60 FPS",
+    "combo": true
+  },
+  {
+    "id": 588,
+    "name": "Dorime",
+    "artist": "Vesgo",
+    "combo": true
+  },
+  {
+    "id": 589,
+    "name": "Save Your Tears",
+    "artist": "The Weeknd",
+    "combo": true
+  },
+  {
+    "id": 590,
+    "name": "Kalinka",
+    "artist": "Marina Devyatova",
+    "combo": true
+  },
+  {
+    "id": 591,
+    "name": "El Sonidito (Beep Song)",
+    "artist": "Hechizeros Band",
+    "combo": true
+  },
+  {
+    "id": 592,
+    "name": "Guantanamera",
+    "artist": "Celia Cruz",
+    "combo": true
+  },
+  {
+    "id": 593,
+    "name": "Sapés Comme Jamais (Pilule Blueue)",
+    "artist": "Maître Gims (feat. Niska)",
+    "combo": true
+  },
+  {
+    "id": 594,
+    "name": "Daddy",
+    "artist": "Psy",
+    "combo": true
+  },
+  {
+    "id": 595,
+    "name": "Next Level",
+    "artist": "aespa",
+    "combo": true
+  },
+  {
+    "id": 596,
+    "name": "Снова Я Напиваюсь",
+    "artist": "SLAVA MARLOW",
+    "combo": true
+  },
+  {
+    "id": 597,
+    "name": "Ghungroo",
+    "artist": "War",
+    "combo": true
+  },
+  {
+    "id": 598,
+    "name": "Param Sunari",
+    "artist": "A.R. Rahman / Shreya Ghoshal",
+    "combo": true
+  },
+  {
+    "id": 599,
+    "name": "Uptown Funk",
+    "artist": "Mark Ronson",
+    "combo": true
+  },
+  {
+    "id": 600,
+    "name": "Hotel Room Service (Meet Me At The Hotel Room)",
+    "artist": "Pitbull",
+    "combo": true
+  },
+  {
+    "id": 601,
+    "name": "Bang Bang",
+    "artist": "Jessie J / Airana Grande / Nicki Minaj",
+    "combo": true
+  },
+  {
+    "id": 602,
+    "name": "Backstreet's Back",
+    "artist": "Backstreet Boys",
+    "combo": true
+  },
+  {
+    "id": 604,
+    "name": "What Is Love",
+    "artist": "TWICE",
+    "combo": true
+  },
+  {
+    "id": 605,
+    "name": "Bang Bang Bang",
+    "artist": "Bigbang",
+    "combo": true
+  },
+  {
+    "id": 606,
+    "name": "Daru Badnaam",
+    "artist": "Param Singh / Kamal Kahlon",
+    "combo": true
+  },
+  {
+    "id": 607,
+    "name": "Bande Organisée",
+    "artist": "Jul / Sch / Kofs / Naps / Soso maness / Elams / Solda / Houari",
+    "combo": true
+  },
+  {
+    "id": 608,
+    "name": "Suavemente",
+    "artist": "Elvis Crespo",
+    "combo": true
+  },
+  {
+    "id": 609,
+    "name": "Mast Punjabi",
+    "artist": "Anand Raj Anand / Sunidhi Chauhan",
+    "combo": true
+  },
+  {
+    "id": 612,
+    "name": "Friday",
+    "artist": "Riton / Nightcrawlers / Mufasa",
+    "combo": true
+  },
+  {
+    "id": 616,
+    "name": "Sempurna",
+    "artist": "Andra and the Backbone",
+    "combo": true
+  },
+  {
+    "id": 617,
+    "name": "Bodo Amat",
+    "artist": "Julio Vio / Insan Aoi",
+    "combo": true
   }
 ]
