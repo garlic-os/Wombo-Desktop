@@ -6,7 +6,7 @@
     import DropArea from "../DropArea.svelte";
     import NextButton from "../NextButton.svelte";
 
-    let image: Maybe<File>;
+    let images: Maybe<File>[] = [];
 
     const dispatch = createEventDispatcher();
 </script>
@@ -14,11 +14,29 @@
 
 
 <PageTemplate center>
-    <DropArea bind:file={image} />
+    <div>
+        <DropArea bind:file={images[0]} />
+        <DropArea bind:file={images[1]} disabled={!images[0]} />
+    </div>
 
-    {#if image}
-        <NextButton on:click={ () => dispatch("submit", image) }>
+    {#if images[0]}
+        <NextButton on:click={ () => dispatch("submit", images) }>
             Submit Face
         </NextButton>
     {/if}
 </PageTemplate>
+
+
+
+<style>
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        gap: 2rem;
+
+        width: 100vw;
+        padding: 0 4rem;
+    }
+</style>

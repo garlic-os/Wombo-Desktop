@@ -2,6 +2,8 @@
 	import type { Maybe } from "../types";
 
 	export let file: Maybe<File> = undefined;
+	export let disabled = false;
+
 	let input: HTMLInputElement;
 
 	// FUNNY BUSINESS: This number's truthiness determines the component's
@@ -28,7 +30,7 @@
 	}
 
 	function handleFile(files: FileList): void {
-		if (files.item(0).type.startsWith("image/")) {
+		if (!disabled && files.item(0).type.startsWith("image/")) {
 			file = files.item(0);
 		}
 	}
@@ -44,6 +46,7 @@
 <div class="drop-area"
 	 class:empty={!file}
 	 class:dragover
+	 class:disabled
 	 on:click={ () => file || input.click() }
 	 on:dragenter={ () => ++dragover }
 	 on:dragleave={ () => --dragover }
@@ -55,13 +58,16 @@
 		<button class="delete icon" on:click={clear} />
 	{:else}
 		<div class="image icon" />
-		<label>Choose or drag and drop an image
-			<input type="file"
-				   accept="image/*"
-				   bind:this={input}
-				   on:change={ () => handleFile(input.files) }
-			/>
-		</label>
+		{#if !disabled}
+			<label>Choose or drag and drop an image
+				<input type="file"
+					accept="image/*"
+					disabled={disabled}
+					bind:this={input}
+					on:change={ () => handleFile(input.files) }
+				/>
+			</label>
+		{/if}
 	{/if}
 </div>
 
@@ -83,17 +89,21 @@
 		transition: all 125ms;
 	}
 
-	.drop-area.empty:active {
+	.drop-area.empty:not(.disabled):active {
 		transform: scale(99%);
 	}
 
-	.drop-area.empty:hover, .drop-area.empty.dragover {
+	.drop-area.empty:not(.disabled):hover, .drop-area.empty:not(.disabled).dragover {
 		border-color: white;
 	}
 
 	.drop-area.empty {
 		cursor: pointer;
 		border-style: dashed;
+	}
+
+	.drop-area.disabled {
+		filter: brightness(0.5);
 	}
 
 	label {

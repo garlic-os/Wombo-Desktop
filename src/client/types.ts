@@ -9,6 +9,7 @@ export interface Meme {
 	name: string;
 	artist: string;
 	id: number;
+	combo: boolean;
 	comment?: string;
 }
 
@@ -23,5 +24,10 @@ export interface S3Fields {
 	policy: string;
 	signature: string;
 };
+
+export interface UploadLocation {
+	url: string;
+	fields: S3Fields;
+}
 
 export type ProgressCallback = (message: string) => void;

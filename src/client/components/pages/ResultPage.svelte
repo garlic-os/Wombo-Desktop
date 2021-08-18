@@ -19,7 +19,7 @@
 <PageTemplate center>
 	{#if videoURL}
 		<!-- svelte-ignore a11y-media-has-caption -->
-		<video src={videoURL} controls autoplay loop />
+		<video src={videoURL} class:combo={meme.combo} controls autoplay loop />
 	{:else}
 		<span>{error?.message}</span>
 	{/if}
@@ -56,6 +56,10 @@
 		video {
 			width: 72vh;
 			height: 72vh;
+		}
+
+		video.combo {
+			width: 144vh;
 		}
 	}
 </style>

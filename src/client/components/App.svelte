@@ -25,7 +25,7 @@
 	});
 
 	let mainElement: HTMLDivElement;
-	let image: Maybe<File>;
+	let images: Maybe<File>[];
 	let page: PageName = "upload";
 	let meme: Maybe<Meme>;
 	let videoURL: Maybe<string>;
@@ -39,6 +39,14 @@
 	$: progressPercent = 100 * progressLevel / maxProgress;
 
 
+	// Load memes.json
+	// ABSTRACTION LEAK: The memes list is stored outside of the component
+	// it's used in to avoid making the component re-request the list every
+	// time it's mounted.
+	const memesLoaded = fetch("../memes.json")
+		.then(response => response.json() as Promise<Meme[]> );
+
+
 	async function submitWombo(): Promise<boolean> {
 		canceled = false;
 		maxProgress = 8;
@@ -46,16 +54,15 @@
 		// Send the request to Wombo and go to the processing page.
 		// generateMeme()'s callback will update the progress message in real
 		// time.
-		const videoURLPromise = generateMeme(image, meme.id, (msg) => {
+		const videoURLPromise = generateMeme(meme, images, (msg) => {
 			if (canceled) return;
-			if (msg === "Converting image...") maxProgress = 9;
+			if (msg === "Converting images...") maxProgress = 9;
 			if (msg !== "Pending...") ++progressLevel;
 			progressMessage = msg;
 		});
 		++progressLevel;
 
-		// Wait until the video is finished generating (or something goes wrong)
-		// and then advance to the page that shows the video to the user.
+		// Wait until the video is finished generating.
 		try {
 			videoURL = await videoURLPromise;
 		} catch (err) {
@@ -81,25 +88,26 @@
 
 	{#if page == "upload"}
 		<UploadPage on:submit={ (event) => {
-			        	image = event.detail;
+			        	images = event.detail;
 			        	page = "select-meme";
 			        }}
 		/>
 
 	{:else if page == "select-meme"}
-		<SelectMemePage on:back={ () => page = "upload" }
+		<SelectMemePage memesLoaded={memesLoaded}
+			            on:back={ () => page = "upload" }
 			            on:submit={ async (event) => {
 			            	meme = event.detail;
 			            	page = "generating";
 			            	if (await submitWombo()) {
 			            		page = "result";
-							}
+			            	}
 			            }}
 		/>
 
 	{:else if page == "generating"}
-		<GeneratingPage bind:progressMessage
-			            bind:progressPercent
+		<GeneratingPage progressMessage={progressMessage}
+			            progressPercent={progressPercent}
 			            on:back={ () => {
 			            	page = "select-meme";
 			            	canceled = true;
@@ -107,9 +115,9 @@
 		/>
 
 	{:else if page == "result"}
-		<ResultPage bind:meme
-			        bind:videoURL
-			        bind:error
+		<ResultPage meme={meme}
+			        videoURL={videoURL}
+			        error={error}
 			        on:back={ () => page = "select-meme" }
 		/>
 
@@ -124,11 +132,13 @@
 		left: 0; top: 0;
 		background-color: black;
 		height: 4.75rem;
-		width: calc(100vw - 17px); /* HACK: Keep the header out of the way of */
-		padding-right: calc(2rem - 17px); /* the scroll bar */
 		padding: 1.5rem 2rem;
 		text-align: center;
 		z-index: 1;
+
+		/* HACK: Keep the header out of the way of the scroll bar */
+		width: calc(100vw - 17px); 
+		padding-right: calc(2rem - 17px);
 	}
 
 	.logo {

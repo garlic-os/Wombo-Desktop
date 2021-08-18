@@ -1,6 +1,4 @@
 <script lang="ts">
-import { onMount } from "svelte";
-
 	import type { Maybe, Meme } from "../types";
 	import { generateGradient } from "../ui-gradients";
 
@@ -73,15 +71,20 @@ import { onMount } from "svelte";
 		<p class="name">{meme.name}</p>
 		<p class="artist">{meme.artist}</p>
 	</div>
+
+	{#if meme.combo}
+		<span class="combo">Combo</span>
+	{/if}
 </label>
 
 
 
 <style>
 	label {
+		position: relative;
 		width: 38rem;
 		max-width: 100%;
-		background-color: green; /* TODO: Random color gradient */
+		background-color: green;
 		border-radius: 40px;
 		border: 3px solid black;
 		cursor: pointer;
@@ -90,7 +93,6 @@ import { onMount } from "svelte";
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
 		filter: saturate(75%);
-		text-shadow: 2px 2px black;
 
 		display: flex;
 		align-items: center;
@@ -126,11 +128,40 @@ import { onMount } from "svelte";
 	.name {
 		font-family: "Yeyey", sans-serif;
 		text-transform: uppercase;
+		text-shadow: 0 2px 1px black;
+		margin-bottom: 0.5rem;
 	}
 
 	.artist {
 		font-size: 1rem;
-		margin-top: 1rem;
+		margin-top: 0;
+	}
+
+	.combo {
+		position: absolute;
+		bottom: 0.8rem;
+		right: 1.4rem;
+
+		text-transform: uppercase;
+		letter-spacing: 0.075rem;
+		background-color: #00000047;
+		border-radius: 500px;
+		padding: 0.25rem 0.45rem;
+		font-size: 7.5pt;
+
+		display: flex;
+		align-items: center;
+	}
+
+	.combo::before {
+		content: "";
+		background-image: url("../img/microphones.png");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		display: inline-block;
+		width: 10px;
+		height: 14px;
+		margin-right: 0.5em;
 	}
 
 	button {

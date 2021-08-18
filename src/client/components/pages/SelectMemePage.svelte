@@ -7,13 +7,11 @@
 	import BackButton from "../BackButton.svelte";
 	import MemeRadioButton from "../MemeRadioButton.svelte";
 
+	export let memesLoaded: Promise<Meme[]> = undefined;
+
 	let meme: Maybe<Meme>;
 
 	const dispatch = createEventDispatcher();
-
-	// Load memes.json
-	const memesLoaded = fetch("../memes.json")
-		.then(response => response.json() as Promise<Meme[]> );
 </script>
 
 
@@ -39,7 +37,7 @@
 
 	<BackButton icon="undo" on:click={ () => dispatch("back") }>
 		Choose new image
-	</BackButton>}
+	</BackButton>
 </PageTemplate>
 
 

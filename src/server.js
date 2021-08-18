@@ -57,12 +57,25 @@ function submitForm(form, url) {
 }
 
 
-app.post("/reserve-upload-location", async () => {
+app.post("/reserve-upload-location", {
+	schema: {
+		consumes: ["application/json"],
+		body: {
+			type: "object",
+			required: ["numwombo", "premium", "user_id"],
+			properties: {
+				numwombo: { type: "number" },
+				premium: { type: "boolean" },
+				user_id: { type: ["string", "null"] },
+			},
+		},
+	},
+}, async (req) => {
 	app.log.info("Reserving new upload location...");
 
 	const { data } = await axios.post(
 		"https://api.wombo.ai/mobile-app/mashups/",
-		null,
+		req.body,
 		{ headers: womboHeader },
 	);
 
