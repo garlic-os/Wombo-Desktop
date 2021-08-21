@@ -7,7 +7,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w | pino-pretty",
     "heroku-postbuild": "",
-    "server": "node dist/index.js",
+    "server": "node index.js",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "start": "npm run server"
   },
