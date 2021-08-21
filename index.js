@@ -185,7 +185,7 @@ app.post("/get-status", {
 
 (async () => {
 	try {
-		await app.listen(process.env.PORT);
+		await app.listen(process.env.PORT, "0.0.0.0");
 	} catch (error) {
 		try {
 			app.log.error(error);
