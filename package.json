@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w | pino-pretty",
-    "server": "node src/server.js",
+    "server": "node dist/index.js",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "start": "npm run server"
   },
@@ -16,6 +16,7 @@
     "@rollup/plugin-typescript": "^8.0.0",
     "@tsconfig/svelte": "^2.0.1",
     "@types/node": "^16.4.13",
+    "dotenv": "^10.0.0",
     "pino-pretty": "^5.1.2",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",

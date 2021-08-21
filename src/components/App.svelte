@@ -38,15 +38,6 @@
 	let canceled = false;
 	$: progressPercent = 100 * progressLevel / maxProgress;
 
-
-	// Load memes.json
-	// ABSTRACTION LEAK: The memes list is stored outside of the component
-	// it's used in to avoid making the component re-request the list every
-	// time it's mounted.
-	const memesLoaded = fetch("../memes.json")
-		.then(response => response.json() as Promise<Meme[]> );
-
-
 	async function submitWombo(): Promise<boolean> {
 		canceled = false;
 		maxProgress = 8;
@@ -94,8 +85,7 @@
 		/>
 
 	{:else if page == "select-meme"}
-		<SelectMemePage memesLoaded={memesLoaded}
-			            on:back={ () => page = "upload" }
+		<SelectMemePage on:back={ () => page = "upload" }
 			            on:submit={ async (event) => {
 			            	meme = event.detail;
 			            	page = "generating";

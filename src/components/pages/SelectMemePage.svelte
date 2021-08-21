@@ -1,3 +1,11 @@
+<script lang="ts" context="module">
+	// Share this data across all instances of this component so that it will
+	// only load once per page load instead of every time an instance of the
+	// component is mounted.
+	const memesLoaded = fetch("../memes.json")
+		.then(response => response.json() as Promise<Meme[]> );
+</script>
+
 <script lang="ts">
 	import type { Maybe, Meme } from "../../types";
 
@@ -6,8 +14,6 @@
 	import NextButton from "../NextButton.svelte";
 	import BackButton from "../BackButton.svelte";
 	import MemeRadioButton from "../MemeRadioButton.svelte";
-
-	export let memesLoaded: Promise<Meme[]> = undefined;
 
 	let meme: Maybe<Meme>;
 
