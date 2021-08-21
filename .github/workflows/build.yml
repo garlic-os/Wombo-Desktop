@@ -16,6 +16,7 @@ jobs:
           npm ci
           npm run build
           mkdir dist
+          cp -r public/ dist/
           cp index.js dist/
           cp package.json dist/
           cp package-lock.json dist/
