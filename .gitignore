@@ -6,3 +6,5 @@ public/build/
 .DS_Store
 
 debug.cap
+
+.env
