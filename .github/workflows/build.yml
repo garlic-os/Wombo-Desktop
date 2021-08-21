@@ -23,4 +23,4 @@ jobs:
         with:
           branch: dist
           folder: dist
-          target-folder: dist
+          target-folder: /
