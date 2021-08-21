@@ -13,7 +13,6 @@ import fastify from "fastify";
 import path from "path";
 import axios from "axios";
 import FormData from "form-data";
-import config from "./config.js";
 import dotenv from "dotenv";
 
 dotenv.config();
