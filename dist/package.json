@@ -1,0 +1,42 @@
+{
+  "name": "wombo-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w | pino-pretty",
+    "heroku-postbuild": "",
+    "server": "node dist/index.js",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "start": "npm run server"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-typescript": "^8.0.0",
+    "@tsconfig/svelte": "^2.0.1",
+    "@types/node": "^16.4.13",
+    "dotenv": "^10.0.0",
+    "pino-pretty": "^5.1.2",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "sirv-cli": "^1.0.12",
+    "svelte": "^3.0.0",
+    "svelte-check": "^2.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "tslib": "^2.0.0",
+    "typescript": "^4.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fastify": "^3.20.1",
+    "fastify-cors": "^6.0.2",
+    "fastify-multipart": "^4.0.7",
+    "fastify-static": "^4.2.2",
+    "form-data": "^4.0.0"
+  }
+}
